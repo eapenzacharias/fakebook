@@ -1,16 +1,15 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.6.3'
 
-gem 'aws-sdk-s3', '~> 1.46'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'devise', '~> 4.7'
 gem 'faker', '~> 1.6', '>= 1.6.3'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'image_processing', '~> 1.9', '>= 1.9.3'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
-gem 'omniauth', '~> 1.9'
+gem 'omniauth-facebook'
 gem 'will_paginate', '~> 3.1', '>= 3.1.8'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
 
