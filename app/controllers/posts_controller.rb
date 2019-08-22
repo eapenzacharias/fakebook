@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_post, only [:destroy, :edit, :update]
   def new
     if user_signed_in?
       @post = Post.new
@@ -52,5 +53,10 @@ private
 
   def update_params
     params.require(:update).permit(:content)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
+    validate_user(@post.user_id)
   end
 end

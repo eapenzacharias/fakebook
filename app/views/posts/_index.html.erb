@@ -1,0 +1,18 @@
+<% if @recent_posts.empty? %>
+  <h3>Nothing to see here</h3>
+<% else %>
+    <% @recent_posts.each do |post| %>
+        <%= link_to "#{post.author.name}" , user_path(post.author)  %>
+        <% if post.author == current_user %>
+          <ul>
+            <li><%= link_to "edit", edit_post_path(post) %></li>
+            <li><%= link_to "delete", post_path(post) , method: :delete, action: :destroy %></li>
+          </ul>
+        <% end %>
+        <h5><%= post.content %><h5>
+          <% if post.created_at != post.updated_at %>
+            <h5>Updated at: <%= post.updated_at.strftime("%d/%m/%Y") %></h5>
+          <% end %>
+          <h5>Created at: <%= post.created_at.strftime("%d/%m/%Y") %></h5>
+    <% end %>
+<% end %>
