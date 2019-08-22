@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Rails.application.routes.draw do
   devise_for :users, controllers: { confirmations: "user/confirmations",
     passwords: "user/passwords",
@@ -20,4 +21,13 @@ Rails.application.routes.draw do
     end
   end
   get "/feed", to: "feed#index"
+=======
+# frozen_string_literal: true
+
+#  Routes for our fakebook app
+Rails.application.routes.draw do
+  root to: 'home#signin'
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+  resources :posts, only: [:index, :new, :create]
+>>>>>>> 4b30492c3e98204a6a23cfa1d654b50139bce145
 end

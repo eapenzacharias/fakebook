@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Posts controller for our fakebook app
 class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post, only [:destroy, :edit, :update]
@@ -45,7 +48,7 @@ class PostsController < ApplicationController
     redirect_to feed_path
   end
 
-private
+  private
 
   def post_params
     params.require(:post).permit(:content)
