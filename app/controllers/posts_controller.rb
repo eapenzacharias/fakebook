@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   def new
-    if signed_in?
+    if user_signed_in?
       @post = Post.new
     else
       redirect_to signin_path
@@ -19,15 +20,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.find(params[:id])
-    if post.user_id = current_user
-      if post.delete?
-        flash[:notice] = 'Post deleted sucessfully'
-      else
-        flash[:alert] = 'Error in deleting'
-      end
+    @post = Post.find(params[:id])
+    if post.delete?
+      flash[:notice] = 'Post deleted sucessfully'
     else
-      flash[:alert] = 'The post you are trying to delete, does not belong to you'
+      flash[:alert] = 'Error in deleting'
     end
     redirect_to feed_path
   end
@@ -39,14 +36,10 @@ class PostsController < ApplicationController
 
   def update
     post = Post.find(params[:id])
-    if post.user_id = current_user
-      if post.update(update_params)
-        flash[:notice] = 'Post updated sucessfully'
-      else
-        flash[:alert] = 'Error in updating'
-      end
+    if post.update(update_params)
+      flash[:notice] = 'Post updated sucessfully'
     else
-      flash[:alert] = 'The post you are trying to update, does not belong to you'
+      flash[:alert] = 'Error in updating'
     end
     redirect_to feed_path
   end
