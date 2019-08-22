@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Posts controller for our fakebook app
 class PostsController < ApplicationController
   before_action :authenticate_user!
   def new
