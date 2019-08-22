@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   before_action :authenticate_user!
   def new
@@ -44,7 +46,7 @@ class PostsController < ApplicationController
     redirect_to feed_path
   end
 
-private
+  private
 
   def post_params
     params.require(:post).permit(:content)
