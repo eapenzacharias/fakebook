@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 Rails.application.routes.draw do
-  devise_for :users, controllers: { confirmations: "user/confirmations",
-    passwords: "user/passwords",
-    registrations: "user/registrations",
-    sessions: "user/sessions",
-    unlocks: "user/unlocks",
+  devise_for :users, controllers: { confirmations: "users/confirmations",
+    passwords: "users/passwords",
+    registrations: "users/registrations",
+    sessions: "users/sessions",
+    unlocks: "users/unlocks",
     omniauth_callbacks: "user/omniauth_callbacks",
   }
 
@@ -17,17 +16,8 @@ Rails.application.routes.draw do
     end
 
     unauthenticated do
-      root 'user/sessions#new', as: :unauthenticated_root
+      root 'users/sessions#new', as: :unauthenticated_root
     end
   end
   get "/feed", to: "feed#index"
-=======
-# frozen_string_literal: true
-
-#  Routes for our fakebook app
-Rails.application.routes.draw do
-  root to: 'home#signin'
-  devise_for :users, controllers: { sessions: 'users/sessions' }
-  resources :posts, only: [:index, :new, :create]
->>>>>>> 4b30492c3e98204a6a23cfa1d654b50139bce145
 end
