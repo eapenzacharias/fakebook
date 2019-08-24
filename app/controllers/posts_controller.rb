@@ -3,7 +3,7 @@
 # Posts controller for our fakebook app
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only [:destroy, :edit, :update]
+  before_action :set_post, only [:destroy, :edit, :show, :update]
   def new
     if user_signed_in?
       @post = Post.new
@@ -24,7 +24,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     if post.delete?
       flash[:notice] = 'Post deleted sucessfully'
     else
@@ -35,11 +34,17 @@ class PostsController < ApplicationController
 
   def edit
     @user = current_user
-    @post = Post.find(params[:id])
   end
 
+  def index
+    @post = current_user.posts.build
+    @post = Post.all
+  end
+
+  def show
+    
+  end
   def update
-    post = Post.find(params[:id])
     if post.update(update_params)
       flash[:notice] = 'Post updated sucessfully'
     else
