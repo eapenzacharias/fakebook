@@ -3,7 +3,7 @@
 # Posts controller for our fakebook app
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only [:destroy, :edit, :show, :update]
+  before_action :set_post, only: [:destroy, :edit, :show, :update]
   def new
     if user_signed_in?
       @post = Post.new
@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = current_user.authored_posts.build(post_params)
+    post = current_user.posts.build(post_params)
 
     if post.save
       flash[:notice] = 'Post was sucessful'
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @post = current_user.posts.build
+    @post = current_user.current_user.posts.build(post_params)
     @post = Post.all
   end
 
