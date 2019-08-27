@@ -3,10 +3,16 @@
 # Posts controller for our fakebook app
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only: [:destroy, :edit, :show, :update]
+  before_action :set_post, only: [:destroy, :show, :update]
+
+  def index
+    @posts = Post.all
+  end
+
   def new
     if user_signed_in?
-      @post = Post.new
+      @posts = Post.new
+      redirect_to posts_path
     else
       redirect_to signin_path
     end
@@ -36,14 +42,9 @@ class PostsController < ApplicationController
     @user = current_user
   end
 
-  def index
-    @post = current_user.current_user.posts.build(post_params)
-    @post = Post.all
+  def show
   end
 
-  def show
-    
-  end
   def update
     if post.update(update_params)
       flash[:notice] = 'Post updated sucessfully'

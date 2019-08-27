@@ -1,4 +1,4 @@
-<% if @recent_posts.empty? %>
+<% if @recent_posts.nil? %>
   <h3>Nothing to see here</h3>
 <% else %>
     <% @recent_posts.each do |post| %>
