@@ -2,8 +2,8 @@
   <h3>No posts to display!</h3>
 <% else %>
     <% @recent_posts.each do |post| %>
-        <%= link_to "#{post.author.name}" , user_path(post.author)  %>
-        <% if post.author == current_user %>
+        <%= link_to "#{post.user.name}" , user_path(post.user)  %>
+        <% if post.user == current_user %>
           <ul>
             <li><%= link_to "edit", edit_post_path(post) %></li>
             <li><%= link_to "delete", post_path(post) , method: :delete, action: :destroy %></li>

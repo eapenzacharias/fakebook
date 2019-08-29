@@ -21,5 +21,6 @@ Rails.application.routes.draw do
       root 'users/sessions#new', as: :unauthenticated_root
     end
   end
-  get '/posts', to: 'posts#show'
+  get '/posts', to: 'feed#index'
+  get '/feed', to: 'feed#index'
 end

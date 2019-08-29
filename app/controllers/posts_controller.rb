@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    if post.delete?
+    if @post.destroy
       flash[:notice] = 'Post deleted sucessfully'
     else
       flash[:alert] = 'Error in deleting'
@@ -38,9 +38,6 @@ class PostsController < ApplicationController
 
   def edit
     @user = current_user
-  end
-
-  def show
   end
 
   def update
@@ -63,8 +60,6 @@ class PostsController < ApplicationController
   end
 
   def set_post
-    @post = Post.find(params[:post_id])
-    @comment = @post.comments.build
-    validate_user(@post.user_id)
+    @post = Post.find(params[:id])
   end
 end
