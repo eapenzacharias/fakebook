@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  devise_for :models
   devise_for :users, controllers: { confirmations: 'users/confirmations',
                                     passwords: 'users/passwords',
                                     registrations: 'users/registrations',
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
                                     omniauth_callbacks: 'user/omniauth_callbacks' }
 
   resources :users, only: [:show]
-  resources :posts, only: [:new, :create, :destroy, :edit, :update]
+  resources :posts, only: [:new, :create, :show, :destroy, :edit, :update]
 
   devise_scope :user do
     authenticated :user do
@@ -20,5 +21,5 @@ Rails.application.routes.draw do
       root 'users/sessions#new', as: :unauthenticated_root
     end
   end
-  get '/feed', to: 'feed#index'
+  get '/posts', to: 'posts#show'
 end

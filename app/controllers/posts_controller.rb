@@ -7,10 +7,13 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    if session[:user_id]
+      @user_id = current_user.post.all
+    end
   end
 
   def new
-    @posts = Post.new
+    @post = current_user.post.build
   end
 
   def create
@@ -21,7 +24,7 @@ class PostsController < ApplicationController
     else
       flash[:alert] = 'Error. Try again!'
     end
-    redirect_to feed_path
+    redirect_to posts_path
   end
 
   def destroy
@@ -60,6 +63,8 @@ class PostsController < ApplicationController
   end
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.build
+    validate_user(@post.user_id)
   end
 end
