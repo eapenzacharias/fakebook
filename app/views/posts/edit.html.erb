@@ -1,5 +1,4 @@
 <%= form_for(@post, as: :update, url: post_path) do |f| %>
-    <%= f.hidden_field :post_id, @post.id%>
     <%= f.text_field :content, class: "edit-post-field"%>
     <%= f.submit "Edit post", class: "btn edit-post-submit" %>
 <% end %>

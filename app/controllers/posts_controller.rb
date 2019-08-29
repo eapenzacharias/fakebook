@@ -37,11 +37,14 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @user = current_user
+    @post = Post.find(params[:id])
   end
+  # def edit
+  #   @user = current_user
+  # end
 
   def update
-    if post.update(update_params)
+    if @post.update(update_params)
       flash[:notice] = 'Post updated sucessfully'
     else
       flash[:alert] = 'Error in updating'
