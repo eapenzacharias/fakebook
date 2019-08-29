@@ -5,14 +5,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    @recent_posts = Post.last(3).reverse()
+    super
+  end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    @recent_posts = Post.last(3).reverse()
+    super
+  end
 
   # GET /resource/edit
   # def edit

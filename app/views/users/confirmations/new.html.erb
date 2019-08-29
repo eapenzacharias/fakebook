@@ -2,7 +2,12 @@
 
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "What's your name?" %>
+  </div>
+  <div class="field">
+    <%= f.date_field :birth_day, autocomplete: "bday"%>
+  </div>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>

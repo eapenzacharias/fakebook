@@ -13,11 +13,11 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-      root 'posts#index', as: :authenticated_root
+      root 'feed#index', as: :authenticated_root
     end
 
     unauthenticated do
-      root 'users/registrations#new', as: :unauthenticated_root
+      root 'users/sessions#new', as: :unauthenticated_root
     end
   end
   get '/feed', to: 'feed#index'

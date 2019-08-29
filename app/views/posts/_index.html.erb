@@ -1,6 +1,5 @@
 <% if @recent_posts.nil? %>
-  <h3>Must be a member to see posts!</h3>
-   <%= render '/users/registrations/new' %>
+  <h3>No posts to display!</h3>
 <% else %>
     <% @recent_posts.each do |post| %>
         <%= link_to "#{post.author.name}" , user_path(post.author)  %>

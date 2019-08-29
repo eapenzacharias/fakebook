@@ -10,12 +10,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    if user_signed_in?
-      @posts = Post.new
-      redirect_to posts_path
-    else
-      redirect_to signin_path
-    end
+    @posts = Post.new
   end
 
   def create
@@ -66,6 +61,5 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
-    validate_user(@post.user_id)
   end
 end
