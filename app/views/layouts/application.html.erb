@@ -13,10 +13,10 @@
     <nav class="navbar navbar-light bg-dark">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Fakebook</a>
+          <a class="navbar-brand" href="/">Fakebook</a>
         </div>
         <span class="nav navbar-nav">
-        <span class="nav-item"><%= link_to 'Home', feed_path %></span>
+        <span class="nav-item"><%= link_to 'Home', '/' %></span>
         <% if signed_in? %>
           <span class="nav-item"><%= link_to 'Create a new post', posts_path %></span>
         <%end%>

@@ -1,6 +1,7 @@
 class AddFieldsToUser < ActiveRecord::Migration[5.2]
   def change
-    add_column :users, :name, :string
+    add_column :users, :name, :string, null: false
+    #Ex:- :null => false
     #Ex:- add_column("admin_users", "username", :string, :limit =>25, :after => "email")
     add_column :users, :birthday, :date
     #Ex:- add_column("admin_users", "username", :string, :limit =>25, :after => "email")
