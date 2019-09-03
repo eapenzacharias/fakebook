@@ -2,7 +2,7 @@
   <h3>No posts to display!</h3>
 <% else %>
     <% @recent_posts.each do |post| %>
-        <%= link_to "#{post.user.name}" , user_path(post.user)  %>
+        <%= link_to "#{post.user.name}:" , user_path(post.user)  %>
         <% if post.user == current_user %>
           <ul>
             <li><%= link_to "edit", edit_post_path(post) %></li>
@@ -13,7 +13,6 @@
           <% if post.created_at != post.updated_at %>
             <h5>Updated at: <%= post.updated_at.strftime("%d/%m/%Y") %></h5>
           <% end %>
-          <h5>Created at: <%= post.created_at.strftime("%d/%m/%Y") %></h5>
-          <h5>Created by: <%= post.user.name %></h5>
+          <h5>Posted at: <%= post.created_at.strftime("%d/%m/%Y") %></h5>
     <% end %>
 <% end %>
