@@ -25,4 +25,5 @@ Rails.application.routes.draw do
   end
   get '/posts', to: 'feed#index'
   get '/feed', to: 'feed#index'
+  #get '/sign_up', to: 'users/registrations'
 end

@@ -24,10 +24,10 @@
         <span class="nav navbar-nav navbar-right">
         <% if signed_in? %>
             <span class="nav-item"><%= link_to "#{current_user.name}'s Feed", current_user %></span>
-            <span class="nav-item"><%= link_to "Sign out", signout_path %></span>
+            <span class="nav-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></span>
         <% else %>
-            <span class="nav-item"><%= link_to login_path do %> <span>Login <% end %></span>
-            <span class="nav-item"><%= link_to signup_path do %> <span>Sign Up <% end %></span>
+            <span class="nav-item"><%= link_to new_user_session_path do %> <span>Login <% end %></span>
+            <span class="nav-item"><%= link_to new_user_registration_path do %> <span>Sign Up <% end %></span>
           <% end %>
         </span>
       </div>
