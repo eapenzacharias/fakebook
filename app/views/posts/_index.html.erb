@@ -14,5 +14,6 @@
             <h5>Updated at: <%= post.updated_at.strftime("%d/%m/%Y") %></h5>
           <% end %>
           <h5>Created at: <%= post.created_at.strftime("%d/%m/%Y") %></h5>
+          <h5>Created by: <%= post.user.name %></h5>
     <% end %>
 <% end %>
