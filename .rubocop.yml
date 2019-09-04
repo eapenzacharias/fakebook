@@ -1,13 +1,34 @@
+AllCops:
+  Exclude:
+    - "bin/*"
+    - "db/*"
+    - "config/*"
+    - "Guardfile"
+    - "Rakefile"
+  DisplayCopNames: true
 
-# Commonly used screens these days easily fit more than 80 characters.
 Metrics/LineLength:
   Max: 120
-
-# Too short methods lead to extraction of single-use methods, which can make
-# the code easier to read (by naming things), but can also clutter the class
 Metrics/MethodLength:
   Include: ["app/controllers/*"]
   Max: 20
-
+Metrics/AbcSize:
+  Include: ["app/controllers/*"]
+  Max: 30
+Metrics/ClassLength:
+  Max: 150
 Metrics/BlockLength:
   ExcludedMethods: ['describe']
+
+Style/Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Layout/AlignHash:
+  EnforcedColonStyle: key
+Layout/ExtraSpacing:
+  AllowForAlignment: false
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented
