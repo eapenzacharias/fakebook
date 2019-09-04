@@ -1,7 +1,6 @@
 # frozen_string_literal: true
-# Posts controller for our fakebook app
-
 class PostsController < ApplicationController
+  # Posts controller for our fakebook app
   before_action :authenticate_user!
   before_action :set_post, only: [:destroy, :show, :update]
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+# Feed controller for our fakebook app
 class FeedController < ApplicationController
   def index
     @user_friends = User.last(4)
