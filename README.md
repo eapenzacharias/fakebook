@@ -11,7 +11,29 @@ This is a project for Rails in the Ruby on Rails part of the main curriculum for
 #### Live ScreenShot of the page
 ![ScreenShot](***Add screenshots***)
 
+#### Requirements
 
+    Ruby 2.6.3
+
+#### Installation
+
+Download repository to your local machine, then run
+   
+    bundle install
+
+#### Database
+
+The project runs on PSQL. For running this application you have to create a PSQL user
+   
+      username: rails_dev
+      password: '1234567890'
+    
+#### Running
+
+Run:
+
+    rails server
+    
 #### Authors
 
 * [@lilleonz](https://github.com/lilleonz)
