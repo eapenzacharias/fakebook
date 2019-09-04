@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-a
+
 Rails.application.routes.draw do
   devise_for :models
   devise_for :users, controllers: { confirmations: 'users/confirmations',
