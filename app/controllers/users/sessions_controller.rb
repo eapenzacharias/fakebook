@@ -8,12 +8,7 @@ class Users::SessionsController < Devise::SessionsController
     @recent_posts = Post.last(3).reverse()
     super
   end
-
-  # POST /resource/sign_in
-  # def create
-  #   super
-  # end
-
+  
   # DELETE /resource/sign_out
   def destroy
     super
