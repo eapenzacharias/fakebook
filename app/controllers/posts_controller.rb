@@ -5,13 +5,6 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post, only: [:destroy, :show, :update]
 
-  def index
-    @posts = Post.all
-    if session[:user_id]
-      @user_id = current_user.post.all
-    end
-  end
-
   def new
     @post = current_user.post.build
   end
