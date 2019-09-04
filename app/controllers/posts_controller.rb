@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class PostsController < ApplicationController
   # Posts controller for our fakebook app
   before_action :authenticate_user!

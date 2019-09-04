@@ -1,5 +1,7 @@
 # frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
+  # Main application controller for our fakebook app
   before_action :permitted_parameters, if: :devise_controller?
   protect_from_forgery with: :exception
 
