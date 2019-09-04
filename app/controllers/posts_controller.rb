@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-
 # Posts controller for our fakebook app
+
 class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post, only: [:destroy, :show, :update]
@@ -39,9 +39,6 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
   end
-  # def edit
-  #   @user = current_user
-  # end
 
   def update
     if @post.update(update_params)
@@ -65,4 +62,5 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
+
 end
