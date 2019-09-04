@@ -1,4 +1,5 @@
-# frozen_string_literal: truer
+# frozen_string_literal: true
+
 equire 'test_helper'
 
 class ModelTest < ActiveSupport::TestCase
