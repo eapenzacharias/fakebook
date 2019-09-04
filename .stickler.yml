@@ -8,3 +8,6 @@ files:
     - "config/*"
     - "Guardfile"
     - "Rakefile"
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
