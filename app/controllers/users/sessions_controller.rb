@@ -5,10 +5,10 @@ class Users::SessionsController < Devise::SessionsController
 
   # GET /resource/sign_in
   def new
-    @recent_posts = Post.last(3).reverse()
+    @recent_posts = Post.last(3).reverse
     super
   end
-  
+
   # DELETE /resource/sign_out
   def destroy
     super

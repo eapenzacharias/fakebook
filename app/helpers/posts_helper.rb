@@ -2,7 +2,6 @@
 
 # Posts helper for our fakebook app
 module PostsHelper
-
   def resource_name
     :user
   end

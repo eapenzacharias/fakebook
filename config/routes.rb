@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 Rails.application.routes.draw do
   devise_for :models
   devise_for :users, controllers: { confirmations: 'users/confirmations',
@@ -8,8 +7,6 @@ Rails.application.routes.draw do
                                     sessions: 'users/sessions',
                                     unlocks: 'users/unlocks',
                                     omniauth_callbacks: 'user/omniauth_callbacks' }
-
-  # devise_for :users, path: 'auth', path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
 
   resources :users, only: [:show]
   resources :posts, only: [:new, :create, :show, :destroy, :edit, :update]
@@ -25,5 +22,4 @@ Rails.application.routes.draw do
   end
   get '/posts', to: 'feed#index'
   get '/feed', to: 'feed#index'
-  #get '/sign_up', to: 'users/registrations'
 end
