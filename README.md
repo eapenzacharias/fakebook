@@ -33,6 +33,10 @@ The project runs on PSQL. For running this application you have to create a PSQL
 Run:
 
     rails server
+
+### Rspec
+    To run rspec at command prompt:
+      rspec
     
 #### Authors
 
