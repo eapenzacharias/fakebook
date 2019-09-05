@@ -1,31 +1,31 @@
 <div class="form container">
-  <h2>Sign up</h2>
+  <h2>SIGN UP</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
-    <div class="field">
-      <%= f.text_field :name, autofocus: true, autocomplete: "first name", placeholder: "Your First Name", required: true %>
+    <div class="form-group">
+      <%= f.text_field :name, autofocus: true, autocomplete: "first name", placeholder: "Your First Name", required: true, class: "form-control" %>
     </div>
-    <div class="field">
-      <%= f.text_field :l_name, autofocus: true, autocomplete: "last name", placeholder: "Your Last Name", required: true %>
+    <div class="form-group">
+      <%= f.text_field :l_name, autofocus: true, autocomplete: "last name", placeholder: "Your Last Name", required: true, class: "form-control" %>
     </div>
-    <div class="field">
-      <%= f.date_field :birthday, autocomplete: "Birthday", required: true%>
+    <div class="form-group">
+      <%= f.date_field :birthday, autocomplete: "Birthday", required: true , class: "form-control" %>
     </div>
-    <div class="field">
-      <%= f.email_field :email, autocomplete: "email", placeholder: "Email", required: true %>
+    <div class="form-group">
+      <%= f.email_field :email, autocomplete: "email", placeholder: "Email", required: true, class: "form-control" %>
     </div>
-    <div class="field">
+    <div class="form-group">
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", required: true %>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", required: true, class: "form-control" %>
     </div>
-    <div class="field">
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password", required: true %>
+    <div class="form-group">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password", required: true, class: "form-control" %>
     </div>
     <div class="actions">
-      <%= f.submit "Sign up", class: "btn" %>
+      <%= f.submit "Sign up", class: "btn btn-primary" %>
     </div>
   <% end %>
   <%= render "devise/shared/links" %>

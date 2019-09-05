@@ -17,9 +17,6 @@
         </div>
         <span class="nav navbar-nav">
         <span class="nav-item"><%= link_to 'Home', '/' %></span>
-        <% if signed_in? %>
-          <span class="nav-item"><%= link_to 'Create a new post', posts_path %></span>
-        <%end%>
         </span>
         <span class="nav navbar-nav navbar-right">
         <% if signed_in? %>
