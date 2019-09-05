@@ -57,6 +57,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
@@ -65,17 +66,19 @@ group :test do
   # gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
-  gem 'guard',                    '2.13.0'
-  gem 'guard-minitest',           '2.4.4'
+  gem 'guard', '2.13.0'
+  gem 'guard-minitest', '2.4.4'
   gem 'minitest'
-  gem 'minitest-reporters',       '1.1.14'
+  gem 'minitest-reporters', '1.1.14'
   gem 'rails-controller-testing', '1.0.2'
+  gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2'
+  gem 'webdrivers', '~> 4.1', '>= 4.1.2'
 end
 
 group :development, :test do
   gem 'guard-livereload'
   gem 'guard-rspec'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
