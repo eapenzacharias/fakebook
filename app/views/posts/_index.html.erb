@@ -1,18 +1,24 @@
-<% if @recent_posts.nil? %>
-  <h3>No posts to display!</h3>
-<% else %>
-    <% @recent_posts.each do |post| %>
-        <%= link_to "#{post.user.name}:" , user_path(post.user)  %>
-        <% if post.user == current_user %>
-          <ul>
-            <li><%= link_to "edit", edit_post_path(post) %></li>
-            <li><%= link_to "delete", post_path(post) , method: :delete, action: :destroy %></li>
-          </ul>
-        <% end %>
-        <h5><%= post.content %><h5>
-          <% if post.created_at != post.updated_at %>
-            <h5>Updated at: <%= post.updated_at.strftime("%d/%m/%Y") %></h5>
-          <% end %>
-          <h5>Posted at: <%= post.created_at.strftime("%d/%m/%Y") %></h5>
-    <% end %>
-<% end %>
+<div class="container">
+  <% if @recent_posts.nil? %>
+    <h3>No posts to display!</h3>
+  <% else %>
+      <% @recent_posts.each do |post| %>
+        <div class=" post container">
+          <div class="row postbar">
+            <div class="col-4"> <%= link_to "#{post.user.name}" , user_path(post.user)  %></div>
+            <% if post.user == current_user %>
+              <div class="col-1"><%= link_to "edit", edit_post_path(post) %></div>
+              <div class="col-1"><%= link_to "delete", post_path(post) , method: :delete, action: :destroy %></div>
+            <% end %>
+            <% if post.created_at != post.updated_at %>
+              <div class="col-3"><p><%= post.updated_at.strftime("Updated at: %d/%m/%Y") %></p></div>
+            <% end %>
+            <div class="col-3"><p><%= post.created_at.strftime("Posted at: %d/%m/%Y") %></p></div>
+          </div>
+          <div row post-content>
+          <h5><%= post.content %><h5>
+          </div>
+        </div>
+      <% end %>
+  <% end %>
+</div>

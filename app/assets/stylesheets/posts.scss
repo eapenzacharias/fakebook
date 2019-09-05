@@ -1,3 +1,16 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+    .post.container {
+        background-color: #d2edff;
+        .postbar.row {
+            vertical-align: center;
+            background-color: #0076c5;
+            color: #fff;
+            a {
+                color: #fff
+            }
+        }
+    }
+}
