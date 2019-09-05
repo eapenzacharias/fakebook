@@ -1,4 +1,6 @@
-<%= form_for(@new_post, as: :post, url: posts_path) do |f| %>
-    <%= f.text_field :content, placeholder: "What are your thinking about #{current_user.name}?", class: "new-post-field"%>
-    <%= f.submit "Post", class: "btn new-post-submit" %>
-<% end %>
+<div class="newpost container">
+    <%= form_for(@new_post, as: :post, url: posts_path) do |f| %>
+        <%= f.text_field :content, placeholder: "What are your thinking about #{current_user.name}?", class: "new-post-field"%>
+        <%= f.submit "Post", class: "btn new-post-submit" %>
+    <% end %>
+</div>
