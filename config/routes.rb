@@ -16,3 +16,6 @@ Rails.application.routes.draw do
   get '/posts', to: 'feed#index'
   get '/feed', to: 'feed#index'
 end
+
+
+# testing for linter issues
