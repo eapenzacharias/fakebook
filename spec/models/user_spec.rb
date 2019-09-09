@@ -1,15 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  context 'scope tests' do
+    let(:users) { create_list(:random_user, 5) }
+    it 'should return users' do
+      expect(User.active_users.size).to eq(3)
+    end
+  end
+
   context 'validation tests' do
-  it 'is valid with first name, last name, email, and password' do
-    user = User.new(
-      name: 'Aaron',
-      l_name: 'Sumner',
-      email: 'tester@example.com',
-      password: 'tester'
-    )
-    expect(user).to be_valid
+    it 'is valid with first name, last name, email, and password' do
+      user = User.new(
+        name: 'Aaron',
+        l_name: 'Sumner',
+        email: 'tester@example.com',
+        password: 'tester'
+      )
+      expect(user).to be_valid
+    end
   end
 
   it 'is invalid without a first name' do
