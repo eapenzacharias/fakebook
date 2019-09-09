@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  context 'validation tests' do
   it 'is valid with first name, last name, email, and password' do
     user = User.new(
       name: 'Aaron',
