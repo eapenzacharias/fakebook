@@ -6,13 +6,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
   def new
-    @recent_posts = Post.last(3).reverse
     super
   end
 
   # POST /resource
   def create
-    @recent_posts = Post.last(3).reverse
     super
   end
 

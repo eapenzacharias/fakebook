@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
     .form.container {
+        border: 1px solid #dddddd;
         max-width: 300px;
+        margin: 50px auto;
+        padding: 15px 25px;
+        text-align: center;
     }
 }

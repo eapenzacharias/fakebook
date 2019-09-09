@@ -5,7 +5,6 @@ class Users::SessionsController < Devise::SessionsController
 
   # GET /resource/sign_in
   def new
-    @recent_posts = Post.last(3).reverse
     super
   end
 
