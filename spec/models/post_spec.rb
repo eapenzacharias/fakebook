@@ -6,10 +6,25 @@ require 'shoulda/matchers'
 require 'factory_bot'
 
 RSpec.describe Post, type: :model do
-  it { is_expected.to validate_presence_of(:user) }
-  it { is_expected.to validate_presence_of(:content) }
+  before(:all) do
+    @post = create(:post)
+  end
+  it "is valid with vaild attributes" do
+    expect(@post).to be_valid
+  end
 
-  it 'has a valid factory' do
-    Post.build(:post).to be_valid
+  it "is invalid without content" do
+    post = build(:post, content: nil)
+    expect(post).to_not be_valid
+  end
+
+  it "is invalid with empty content" do
+    post = build(:post, content: '')
+    expect(post).to_not be_valid
+  end
+
+  it "is invalid without a user" do
+    post = build(:post, user_id: nil)
+    expect(post).to_not be_valid
   end
 end
