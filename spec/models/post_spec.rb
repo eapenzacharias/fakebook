@@ -4,16 +4,14 @@ require 'rails_helper'
 require 'rspec/rails'
 require 'shoulda/matchers'
 
-RSpec.describe Post, type: :model do
-  describe 'User and timeline associations' do
-    # it { should belong_to(:user).class_name('User') }
-    # it { should belong_to(:postable) }
-  end
+FactoryBot.use_parent_strategy = false
 
-  describe 'factories and instance method' do
-    it 'has a valid factory' do
-      user = build(:user)
-      expect(build(:user_post, author_id: user.id)).to be_valid
+RSpec.describe Post, type: :model do
+  describe '#new' do
+    context 'when not logged in' do
+      it 'redirects to sign in page' do
+        response.to redirect_to(sign_in_path)
+      end
     end
   end
 end

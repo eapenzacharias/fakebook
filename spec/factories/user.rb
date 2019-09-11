@@ -3,6 +3,8 @@ FactoryBot.define do
     name 'John'
     l_name 'Doe'
     email 'john@example.com'
+    password 'johndoe'
+    password_confirmation 'johndoe'
   end
 
   factory :random_user, class: User do

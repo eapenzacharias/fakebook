@@ -76,6 +76,8 @@ group :test do
 end
 
 group :development, :test do
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
   gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
   gem 'guard-livereload'
   gem 'guard-rspec'

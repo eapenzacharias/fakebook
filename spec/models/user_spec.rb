@@ -1,13 +1,8 @@
 require 'rails_helper'
+require 'rspec/rails'
+require 'shoulda/matchers'
 
-RSpec.describe User, type: :model do
-  context 'scope tests' do
-    let(:users) { create_list(:random_user, 5) }
-    it 'should return users' do
-      expect(User.active_users.size).to eq(3)
-    end
-  end
-
+RSpec.describe User do
   context 'validation tests' do
     it 'is valid with first name, last name, email, and password' do
       user = User.new(
