@@ -12,8 +12,8 @@ RSpec.describe Post, type: :model do
 
   describe 'factories and instance method' do
     it 'has a valid factory' do
-      user = build(:user)
-      expect(build(:user_post, author_id: user.id)).to be_valid
+      user = create(:user)
+      expect(create(:post, user_id: user.id)).to be_valid
     end
   end
 end

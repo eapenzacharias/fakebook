@@ -1,8 +1,7 @@
 require 'factory_bot'
 
 FactoryBot.define do
-  rand_string = (0..50).map {(65 + rand(26).chr)}.join
-  email = "user_random_#{rand_string.downcase}@mail.com"
+  email = Faker::Internet.email
 
   factory :user do |i|
     i.email { email }
