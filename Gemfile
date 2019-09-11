@@ -71,7 +71,7 @@ group :test do
   gem 'minitest'
   gem 'minitest-reporters', '1.1.14'
   gem 'rails-controller-testing', '1.0.2'
-  gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2'
+  gem 'shoulda-matchers'
   gem 'webdrivers', '~> 4.1', '>= 4.1.2'
 end
 

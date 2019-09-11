@@ -78,3 +78,7 @@ rescue NameError
 end
 
 Cucumber::Rails::Database.javascript_strategy = :truncation
+
+RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+end
