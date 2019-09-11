@@ -10,10 +10,10 @@ RSpec.describe Post, type: :model do
     # it { should belong_to(:postable) }
   end
 
-  #describe 'factories and instance method' do
-  #  it 'has a valid factory' do
-  #    user = build(:user)
-  #    expect(build(:user_post, author_id: user.id)).to be_valid
-  #  end
-  #end
+  describe 'factories and instance method' do
+    it 'has a valid factory' do
+      user = build(:user)
+      expect(build(:user_post, author_id: user.id)).to be_valid
+    end
+  end
 end
