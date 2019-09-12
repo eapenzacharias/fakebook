@@ -1,0 +1,14 @@
+<div class="container">
+  <% if @users.nil? %>
+    <h3>No posts to display!</h3>
+  <% else %>
+      <% @users.each do |user| %>
+        <div class=" user container">
+          <div class="row postbar">
+            <div class="col-4 my-auto name"> <%= link_to "#{user.name} #{user.l_name}".html_safe , user_path(user), class: "btn btn-success" %></div>
+            <div class="col-3 my-auto"><%= user.birthday.strftime("%d/%m/%Y") %></div>
+          </div>
+        </div>
+      <% end %>
+  <% end %>
+</div>
