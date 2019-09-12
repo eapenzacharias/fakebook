@@ -2,7 +2,6 @@ require 'factory_bot'
 
 FactoryBot.define do
   email = Faker::Internet.email
-
   factory :user do |i|
     i.email { email }
     i.password { 'password' }
