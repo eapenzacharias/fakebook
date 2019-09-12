@@ -8,6 +8,6 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.order( created_at: :desc )
+    @users = User.order(created_at: :desc)
   end
 end

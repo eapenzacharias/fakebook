@@ -8,6 +8,6 @@ FactoryBot.define do
     i.password_confirmation { 'password' }
     i.name { 'John' }
     i.l_name { 'Doe' }
-    i.birthday { Date.current() }
+    i.birthday { Date.current }
   end
 end
