@@ -27,10 +27,10 @@ The project runs on PSQL. For running this application you must have a default P
 For altering or creating a PSQL role run the following commands in postgres console
    
       For Creating a User:
-      postgres=# CREATE ROLE role_name WITH LOGIN CREATEDB
+      postgres=# CREATE ROLE role_name WITH LOGIN CREATEDB;
       
       For Altering Existing User
-      postgres=# ALTER ROLE "role_name" WITH LOGIN CREATEDB
+      postgres=# ALTER ROLE "role_name" WITH LOGIN CREATEDB;
       
     
 #### Running

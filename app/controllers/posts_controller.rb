@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:destroy, :show, :update]
 
   def new
-    @post = current_user.post.build
+    Post.new
   end
 
   def create
