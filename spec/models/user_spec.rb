@@ -48,6 +48,5 @@ RSpec.describe User, type: :model do
       user = build(:user, password: 'short')
       expect(user).to_not be_valid
     end
-
   end
 end
