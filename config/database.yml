@@ -46,15 +46,15 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  username: rails_dev
-  password: '1234567890'
-  host: localhost
-  port: 5432
 
 development:
+  <<: *default
+  database: fakebook_dev
+
+production:
   <<: *default
   database: fakebook
 
 test:
   <<: *default
-  database: fakebook
+  database: fakebook_test
