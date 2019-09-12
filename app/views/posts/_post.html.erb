@@ -1,0 +1,23 @@
+<li id="post-<%= post.id %>" class='container post' >
+  <div class='post_info d-flex flex-row'>
+    <%= image_tag post.author.profile_picture.thumb.url %>
+    <div class='author_timestamp d-flex flex-column mr-auto'>
+      <%= link_to post.author.name, post.author %>
+      <%= post.formatted_timestamp %>
+    </div>
+    <% if current_user?(post.author) %>
+      <div class='dropdown'>
+        <button class="btn btn-profile dropdown-toggle"id="post-<%= post.id %>-dropdown" type='button' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+        <div class="dropdown-menu" aria-labelledby="post-<%= post.id %>-dropdown">
+            <%= link_to 'Edit', edit_post_path(post), id: "post-#{post.id}-edit", class: 'dropdown-item'%>
+            <hr>
+            <%= link_to 'Delete', post, method: :delete, id: "post-#{post.id}-delete", class: 'dropdown-item', 
+                                                         data: { confirm: 'Are you sure you want to delete this post?' }%>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  <div class='content'>
+    <%= post.content %>
+  </div>
+</li>

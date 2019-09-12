@@ -11,7 +11,38 @@ This is a project for Rails in the Ruby on Rails part of the main curriculum for
 #### Live ScreenShot of the page
 ![ScreenShot](***Add screenshots***)
 
+#### Requirements
 
+    Ruby 2.6.3
+
+#### Installation
+
+Download repository to your local machine, then run
+   
+    bundle install
+
+#### Database
+
+The project runs on PSQL. For running this application you must have a default PSQL role WITH LOGIN CREATEDB
+For altering or creating a PSQL role run the following commands in postgres console
+   
+      For Creating a User:
+      postgres=# CREATE ROLE role_name WITH LOGIN CREATEDB;
+      
+      For Altering Existing User
+      postgres=# ALTER ROLE "role_name" WITH LOGIN CREATEDB;
+      
+    
+#### Running
+
+Run:
+
+    rails server
+
+### Rspec
+    To run rspec at terminal:
+      rspec
+    
 #### Authors
 
 * [@lilleonz](https://github.com/lilleonz)

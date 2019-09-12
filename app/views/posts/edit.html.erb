@@ -1,0 +1,6 @@
+<div class="newpost container">
+    <%= form_for(@post, :html => {:class => "form-inline"}, as: :update, url: post_path) do |f| %>
+        <%= f.text_field :content, class: "form-control col-9"%>
+        <%= f.submit "Edit post", class: "btn btn-primary col-2" %>
+    <% end %>
+</div>
