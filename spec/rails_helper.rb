@@ -9,7 +9,7 @@ require 'support/factory_bot'
 # require 'rake'
 Rails.application.load_tasks
 
-begin 
+begin
   Rake::Task['db:test:purge'].invoke
 rescue SystemExit => e
   puts e.to_s.strip

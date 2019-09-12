@@ -6,8 +6,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @recent_posts = @user.posts
   end
-  
+
   def index
-    @users = User.order(created_at: :desc)
+    @users = User.order( created_at: :desc )
   end
 end
