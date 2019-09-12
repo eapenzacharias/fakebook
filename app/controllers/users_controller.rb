@@ -7,6 +7,6 @@ class UsersController < ApplicationController
     @recent_posts = @user.posts
   end
   def index
-    @users = User.all
+    @users = User.order(created_at: :desc)
   end
 end
