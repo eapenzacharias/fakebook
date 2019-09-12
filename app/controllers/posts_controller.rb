@@ -2,7 +2,7 @@
 
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only: [:destroy, :show, :update]
+  before_action :set_post, only: %i[destroy show update]
 
   def new
     Post.new

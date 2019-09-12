@@ -5,6 +5,7 @@ AllCops:
     - "config/*"
     - "Guardfile"
     - "Rakefile"
+    - 'spec/**/*.rb'
   DisplayCopNames: true
 
 Metrics/LineLength:
