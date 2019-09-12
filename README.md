@@ -23,10 +23,15 @@ Download repository to your local machine, then run
 
 #### Database
 
-The project runs on PSQL. For running this application you have to create a PSQL user
+The project runs on PSQL. For running this application you must have a default PSQL role WITH LOGIN CREATEDB
+For altering or creating a PSQL role run the following commands in postgres console
    
-      username: rails_dev
-      password: '1234567890'
+      For Creating a User:
+      postgres=# CREATE ROLE role_name WITH LOGIN CREATEDB
+      
+      For Altering Existing User
+      postgres=# ALTER ROLE "role_name" WITH LOGIN CREATEDB
+      
     
 #### Running
 
@@ -35,7 +40,7 @@ Run:
     rails server
 
 ### Rspec
-    To run rspec at command prompt:
+    To run rspec at terminal:
       rspec
     
 #### Authors
