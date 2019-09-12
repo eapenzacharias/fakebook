@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require 'rspec/rails'
-require 'shoulda/matchers'
-require 'factory_bot'
 
 RSpec.describe Post, type: :model do
   before(:all) do

@@ -71,13 +71,11 @@ group :test do
   gem 'minitest'
   gem 'minitest-reporters', '1.1.14'
   gem 'rails-controller-testing', '1.0.2'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2'
   gem 'webdrivers', '~> 4.1', '>= 4.1.2'
 end
 
 group :development, :test do
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
   gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
   gem 'guard-livereload'
   gem 'guard-rspec'

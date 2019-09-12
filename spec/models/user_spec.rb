@@ -1,6 +1,4 @@
 require 'rails_helper'
-require 'rspec/rails'
-require 'shoulda/matchers'
 
 RSpec.describe User, type: :model do
   before(:all) do
