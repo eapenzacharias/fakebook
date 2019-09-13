@@ -18,6 +18,9 @@
           <div row post-content>
           <h5><%= post.content %><h5>
           </div>
+          <div row>
+            <%= button_to "#{post.likes.count} Likes".html_safe , like_path(post.id, current_user), class: "btn btn-success" %>
+          </div>
         </div>
       <% end %>
   <% end %>

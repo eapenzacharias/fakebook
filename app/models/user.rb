@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :l_name, presence: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
   has_many :posts, dependent: :destroy
+  has_many :likes, dependent: :destroy
 end

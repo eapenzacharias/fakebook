@@ -5,7 +5,7 @@ class LikesController < ApplicationController
     before_action :validate_like, only: %i[react]
 
     def react
-        @like == nil? create : destroy
+        @like.nil? create : destroy
     end
     
     def create
