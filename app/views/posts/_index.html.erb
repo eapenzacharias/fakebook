@@ -19,7 +19,10 @@
           <h5><%= post.content %><h5>
           </div>
           <div row>
-            <%= button_to "#{post.likes.count} Likes".html_safe , like_path(post.id, current_user), class: "btn btn-success" %>
+            <%="#{post.id}".html_safe %>
+
+            <%= link_to "Likes".html_safe , react_path(post), class: "btn btn-success",method: :post, action: :react %>
+            <h4>
           </div>
         </div>
       <% end %>

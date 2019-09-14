@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   get '/feed', to: 'feed#index'
   get '/users', to: 'users#index'
 
-  post '/like', to: 'likes#react'
+  post '/react', to: 'likes#react'
 end

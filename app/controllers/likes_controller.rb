@@ -2,15 +2,15 @@
 
 class LikesController < ApplicationController
     before_action :authenticate_user!
-    before_action :validate_like, only: %i[react]
+    before_action :find_like, only: %i[react]
 
     def react
-        @like.nil? create : destroy
+        @like.nil? ? create : destroy
     end
     
     def create
-        like = current_user.likes.build(post: @post, liked:1)
-        if like.save
+        @like = current_user.likes.build(post: @post, liked:1)
+        if @like.save
           flash[:notice] = 'Post liked successfully'
         else
           flash[:alert] = 'Error. Try again!'
@@ -27,8 +27,8 @@ class LikesController < ApplicationController
 
     private
 
-    def validate_like
-        @post = Post.find(params[:post_id])
+    def find_like
+        @post = Post.find(params[:id])
         @like = Like.where(post: @post, user: current_user)
     end
 end
