@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     else
       flash[:alert] = 'Error. Try again!'
     end
-    redirect_to posts_path
+    redirect_to feed_path
   end
 
   def destroy

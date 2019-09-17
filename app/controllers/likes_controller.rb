@@ -1,34 +1,39 @@
 # frozen_string_literal: true
 
 class LikesController < ApplicationController
-    before_action :authenticate_user!
-    before_action :find_like, only: %i[react]
-
-    def react
-        @like.nil? ? create : destroy
-    end
-    
+    before_action :find_post
+    before_action :find_like, only: [:destroy]
     def create
-        @like = current_user.likes.build(post: @post, liked:1)
-        if @like.save
-          flash[:notice] = 'Post liked successfully'
+        if already_liked?
+          destroy
         else
-          flash[:alert] = 'Error. Try again!'
+          @post.likes.create(user_id: current_user.id)
         end
+        redirect_to request.referrer
     end
 
     def destroy
-        if @like.destroy
-          flash[:notice] = 'Post disliked '
-        else
-          flash[:alert] = 'Error. Try again!'
-        end
+      if !(already_liked?)
+        flash[:notice] = "Cannot unlike"
+      else
+        find_like
+        @like.destroy
+      end
+      redirect_to request.referrer
     end
-
+  
     private
 
+    def find_post
+        @post = Post.find(params[:post_id])
+    end
+
     def find_like
-        @post = Post.find(params[:id])
-        @like = Like.where(post: @post, user: current_user)
+        @like = @post.likes.find(params[:like_id])
+        #@like = Like.where(user_id: current_user.id, post_id: params[:post_id])
+    end
+
+    def already_liked?
+        Like.where(user_id: current_user.id, post_id: params[:post_id]).exists?
     end
 end

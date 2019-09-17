@@ -17,13 +17,15 @@
           </div>
           <div row post-content>
           <h5><%= post.content %><h5>
+          <% liked = post.likes.find { |like| like.user_id == current_user.id} %>
+          <%if liked !=nil %>
+            <%= button_to 'Unlike', post_likes_path(liked.id), method: :post %>
+          <% else %>
+            <%= button_to 'Like', post_likes_path(post), method: :post %>
+          <% end %>
+          <p><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
           </div>
-          <div row>
-            <%="#{post.id}".html_safe %>
-
-            <%= link_to "Likes".html_safe , react_path(post), class: "btn btn-success",method: :post, action: :react %>
-            <h4>
-          </div>
+          
         </div>
       <% end %>
   <% end %>
