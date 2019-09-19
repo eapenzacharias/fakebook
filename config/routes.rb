@@ -7,6 +7,14 @@ Rails.application.routes.draw do
     resources :likes, only: [:create]
     resources :comments, only: [:create, :index, :destroy]
   end
+
+  resources :posts do 
+    member do
+      put "like", to: "posts#upvote"
+      put "dislike", to: "posts#downvote"
+    end
+  end
+
   devise_scope :user do
     authenticated :user do
       root 'feed#index', as: :authenticated_root

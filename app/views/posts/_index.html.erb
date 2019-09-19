@@ -5,28 +5,43 @@
       <% @recent_posts.each do |post| %>
         <div class=" post container">
           <div class="row postbar">
-            <div class="col-4 my-auto name"> <%= link_to "#{post.user.name}".html_safe , user_path(post.user), class: "btn btn-success" %></div>
+            <div class="col-4 my-auto name">
+              <%= link_to "#{post.user.name}".html_safe , user_path(post.user), class: "btn btn-success" %>
+            </div>
             <% if post.user == current_user %>
-              <div class="col-1 my-auto"><%= link_to "Edit", edit_post_path(post), class: "btn btn-warning btn-xs" %></div>
-              <div class="col-1 my-auto"><%= link_to "Delete", post_path(post), class: "btn btn-danger btn-xs", method: :delete, action: :destroy %></div>
+              <div class="col-1 my-auto">
+                <%= link_to "Edit", edit_post_path(post), class: "btn btn-warning btn-xs" %>
+              </div>
+              <div class="col-1 my-auto">
+                <%= link_to "Delete", post_path(post), class: "btn btn-danger btn-xs", method: :delete, action: :destroy %>
+              </div>
             <% end %>
             <% if post.created_at != post.updated_at %>
-              <div class="col-3 my-auto"><%= post.updated_at.strftime("Updated at: %d/%m/%Y") %></div>
+              <div class="col-3 my-auto">
+                <%= post.updated_at.strftime("Updated at: %d/%m/%Y") %>
+              </div>
             <% end %>
-            <div class="col-3 my-auto"><%= post.created_at.strftime("Posted at: %d/%m/%Y") %></div>
+            <div class="col-3 my-auto">
+              <%= post.created_at.strftime("Posted at: %d/%m/%Y") %>
+            </div>
           </div>
-          <div row post-content>
-          <h5><%= post.content %><h5>
-          <% liked = post.likes.find { |like| like.user_id == current_user.id} %>
-          <%if liked !=nil %>
-            <%= button_to 'Unlike', post_likes_path(liked.id), method: :post %>
-          <% else %>
-            <%= button_to 'Like', post_likes_path(post), method: :post %>
-          <% end %>
-          <p><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+          <div class="row post-content">
+            <h5>
+              <%= post.content %>
+            <h5>
+            <%= link_to like_post_path(post), class: "like", method: :put do %>
+              <button type="button" class="btn btn-primary">
+                <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
+                <span class="badge"><%= post.get_upvotes.size %></span>
+              </button>
+            <% end %>
+            <%= link_to dislike_post_path(post), class: "like", method: :put do %>
+              <button type="button" class="btn btn-primary">
+                <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
+                <span class="badge"><%= post.get_downvotes.size %></span>
+              </button>
+            <% end %>
           </div>
-          
-        </div>
       <% end %>
   <% end %>
 </div>
