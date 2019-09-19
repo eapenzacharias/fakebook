@@ -24,6 +24,7 @@
             <%= button_to 'Like', post_likes_path(post), method: :post %>
           <% end %>
           <p><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+          <%= render "comments/new" %>
           </div>
           
         </div>

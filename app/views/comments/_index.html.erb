@@ -1,0 +1,13 @@
+<% @post.comments.each do |comment| %>
+        <div class=" post container">
+          <div class="row postbar">
+            <div class="col-4 my-auto name"> <%= link_to "#{comment.user.name}".html_safe , user_path(post.user), class: "btn btn-success" %></div>
+            <% if comment.user == current_user %>
+              <div class="col-1 my-auto"><%= link_to "Delete", post_cimment_path(@post, comment), class: "btn btn-danger btn-xs", method: :delete, action: :destroy %></div>
+            <% end %>
+          </div>
+          <div row post-content>
+          <h5><%= comment.body %><h5>
+          </div>    
+        </div>
+      <% end %>

@@ -1,0 +1,7 @@
+<div class="newpost container">
+  <%= form_for(:comment, :html => {:class => "form-inline"}, url: post_comment_path(:post_id)) do |f| %>
+  <%= f.hidden_field :post_id, value: @post.id %>
+  <%= f.text_field :body, placeholder: "What are your thinking about #{current_user.name}?", class: "form-control col-9" %>
+  <%= f.submit "Post", class: "btn btn-primary col-2" %>
+<% end %>
+</div>
