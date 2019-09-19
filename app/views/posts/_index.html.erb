@@ -25,6 +25,7 @@
               <%= post.created_at.strftime("Posted at: %d/%m/%Y") %>
             </div>
           </div>
+<<<<<<< HEAD
           <div class="row post-content">
             <h5>
               <%= post.content %>
@@ -41,6 +42,18 @@
                 <span class="badge"><%= post.get_downvotes.size %></span>
               </button>
             <% end %>
+=======
+          <div row post-content>
+          <h5><%= post.content %><h5>
+          <% liked = post.likes.find { |like| like.user_id == current_user.id} %>
+          <%if liked !=nil %>
+            <%= button_to 'Unlike', post_likes_path(liked.id), method: :post %>
+          <% else %>
+            <%= button_to 'Like', post_likes_path(post), method: :post %>
+          <% end %>
+          <p><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+          <%= render "comments/new" %>
+>>>>>>> milestone-4-comments-likes
           </div>
       <% end %>
   <% end %>

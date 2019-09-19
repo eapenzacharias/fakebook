@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :posts, only: [:new, :create, :show, :destroy, :edit, :update]
   resources :comments, only: [:create, :index, :destroy]
   resources :posts do
-    resources :likes, only: [:create]
-    resources :comments, only: [:create, :index, :destroy]
+    resources :likes
+    resources :comments
   end
 
   resources :posts do 
