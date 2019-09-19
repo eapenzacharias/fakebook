@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :comments, only: [:create, :index, :destroy]
   resources :posts do
     resources :likes
-    resources :comments, only: [:create, :index, :destroy]
+    resources :comments
   end
   devise_scope :user do
     authenticated :user do
