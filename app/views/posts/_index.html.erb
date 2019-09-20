@@ -1,9 +1,9 @@
-<div class="container">
+<div class="post container">
   <% if @recent_posts.nil? %>
     <h3>No posts to display!</h3>
   <% else %>
       <% @recent_posts.each do |post| %>
-        <div class=" post container">
+        <article class="container">
           <div class="row postbar">
             <div class="col-4 my-auto name">
               <%= link_to "#{post.user.name}".html_safe , user_path(post.user), class: "btn btn-success" %>
@@ -24,8 +24,6 @@
             <div class="col-3 my-auto">
               <%= post.created_at.strftime("Posted at: %d/%m/%Y") %>
             </div>
-          </div>
-          <div class="row post-content">
             <h5>
               <%= post.content %>
             <h5>
@@ -42,6 +40,7 @@
               </button>
             <% end %>
           </div>
+        </article>
       <% end %>
   <% end %>
 </div>

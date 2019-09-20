@@ -2,10 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .container {
-    .post.container {
+    .post .container {
         border: 1px solid #dadada;
         border-radius: 10px;
         margin: 15px 5px;
+        padding-top: 20px;
         padding-bottom: 10px;
         .postbar.row {
             border-bottom: 1px solid #dadada;
