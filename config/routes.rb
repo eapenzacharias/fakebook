@@ -3,16 +3,14 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :posts, only: [:new, :create, :show, :destroy, :edit, :update]
   resources :comments, only: [:create, :index, :destroy]
-  resources :posts do
-    resources :likes
-    resources :comments
-  end
 
   resources :posts do 
     member do
       put "like", to: "posts#upvote"
       put "dislike", to: "posts#downvote"
     end
+    resources :likes
+    resources :comments
   end
 
   devise_scope :user do
