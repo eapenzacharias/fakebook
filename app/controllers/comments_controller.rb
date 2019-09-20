@@ -8,7 +8,6 @@ class CommentsController < ApplicationController
 
     def create
       @comment = @post.comments.create(comment_params)
-      @comment.user = current_user
       redirect_to request.referrer
 
     end
@@ -31,6 +30,6 @@ class CommentsController < ApplicationController
     end
 
     def comment_params
-      params.require(:comment).permit(:body)
+      params.require(:comment).permit(:body,:post_id)
     end
 end

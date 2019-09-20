@@ -1,5 +1,5 @@
 <div class="newpost container">
-  <%= form_for([@post, @post.comment.build]) do |f| %>
+  <%= form_for(:comment, url: post_comments_path(@post, @comment)) do |f| %>
   <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.text_field :body, placeholder: "What are your thinking about #{current_user.name}?", class: "form-control col-9" %>
   <%= f.submit "Post", class: "btn btn-primary col-2" %>
