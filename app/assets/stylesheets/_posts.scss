@@ -3,11 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 .container {
-    .post .container {
+    .post.container {
         border: 1px solid #dadada;
         border-radius: 10px;
         margin: 15px 5px;
-        padding-top: 20px;
         padding-bottom: 10px;
         .postbar.row {
             border-bottom: 1px solid #dadada;
@@ -28,9 +27,9 @@
         }
     }
     .newpost.container {
-        margin: 40px 10%;
+        margin: 40px 4%;
         .btn {
-            margin: 20px 20px;
+            margin: 0 20px;
         }
     }
 }
