@@ -16,7 +16,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-
 @font-face {
     font-family: "FontAwesome";
     src: url('<%= asset_path("fontawesome-webfont.eot") %>');

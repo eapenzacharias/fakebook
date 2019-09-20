@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     end
 
     def create
-      @comment = @post.comments.new(comment_params)
+      @comment = @post.comments.create(comment_params)
       @comment.user = current_user
       redirect_to request.referrer
 
@@ -26,7 +26,7 @@ class CommentsController < ApplicationController
 
     private
 
-    def find_post
+    def find_post!
         @post = Post.find(params[:post_id])
     end
 
