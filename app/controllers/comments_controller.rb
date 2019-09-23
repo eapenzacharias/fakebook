@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find_by(id: params[:id])
 
-    if @comment.user_id == @current_user_id
+    if @comment.user_id == current_user.id
       @comment.destroy
     else
       flash[:notice] = 'not owned by user'
