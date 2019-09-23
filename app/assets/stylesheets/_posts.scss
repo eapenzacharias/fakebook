@@ -6,7 +6,7 @@
     .post.container {
         border: 1px solid #dadada;
         border-radius: 10px;
-        margin: 15px 5px;
+        margin: 12px 5px;
         padding-bottom: 10px;
         .postbar.row {
             border-bottom: 1px solid #dadada;
@@ -27,9 +27,19 @@
         }
     }
     .newpost.container {
-        margin: 40px 4%;
+        margin: 20px 4%;
         .btn {
             margin: 0 20px;
         }
     }
+}
+
+.form-inline .form-control {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.container {
+    padding-top: 12px;
 }
