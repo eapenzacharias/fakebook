@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.5.1'
 
 gem 'acts_as_votable'
 gem 'binding_of_caller', '~> 0.8.0'
