@@ -41,6 +41,7 @@
             <span class="badge"><%= post.get_downvotes.size %></span>
             </button>
           <% end %>
+          <span> <%= link_to "Comments: #{post.comments.count}".html_safe , post_path(post.id), class: "btn btn-success" %>
         </div>
       </div>
     <% end %>

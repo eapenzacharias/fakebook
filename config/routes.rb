@@ -24,4 +24,5 @@ Rails.application.routes.draw do
   get '/posts', to: 'feed#index'
   get '/feed', to: 'feed#index'
   get '/users', to: 'users#index'
+  post 'posts/:post_id/comments', to: 'comments#create'
 end

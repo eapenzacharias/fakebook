@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 gem 'acts_as_votable'
-gem 'better_errors', '~> 2.5', '>= 2.5.1'
 gem 'binding_of_caller', '~> 0.8.0'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'devise', '~> 4.7'
