@@ -24,17 +24,12 @@
         <h5>
             <%= post.content %>
         <h5>
-        <%= link_to like_post_path(post), class: "like", method: :put do %>
-            <button type="button" class="btn btn-primary">
-                <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
-                <span class="badge"><%= post.get_upvotes.size %></span>
-            </button>
-        <% end %>
-        <%= link_to dislike_post_path(post), class: "like", method: :put do %>
-            <button type="button" class="btn btn-primary">
-                <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
-                <span class="badge"><%= post.get_downvotes.size %></span>
-            </button>
+        <span class="col-1 my-auto"><%= link_to "#{post.likes.count} #{(post.likes.count) == 1 ? 'Like' : 'Likes'}", post_path(post), class: "btn btn-success" %></span>
+        <% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
+        <% if pre_like %>
+            <%= button_to 'Unlike', post_like_path(post, pre_like), method: :delete %>
+        <% else %>
+            <%= button_to 'Like', post_likes_path(post), method: :post %>
         <% end %>
     </div>
 </div>
