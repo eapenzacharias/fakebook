@@ -30,7 +30,6 @@ class LikesController < ApplicationController
 
     def find_like
         @like = @post.likes.find(params[:like_id])
-        #@like = Like.where(user_id: current_user.id, post_id: params[:post_id])
     end
 
     def already_liked?
