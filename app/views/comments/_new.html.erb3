@@ -1,6 +1,0 @@
-<div class="newpost container">
-  <%= form_for(@new_comment, :html => {:class => "form-inline"}, as: :comment, url: '/posts/:post_id/comments') do |f| %>
-  <%= f.text_field :body, placeholder: "What are your thinking about #{current_user.name}?", class: "form-control col-9" %>
-  <%= f.submit "Post", class: "btn btn-primary col-2" %>
-<% end %>
-</div>
