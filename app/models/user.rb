@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-
   scope :active_users, -> { where(active: true) }
   scope :inactive_users, -> { where(active: false) }
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable

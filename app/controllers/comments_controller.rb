@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-  before_action :set_post, only: [:create, :index, :destroy]
+  before_action :set_post, only: %i[create index destroy]
 
   def index
     @comments = @post.comments.order(created_at: :desc)

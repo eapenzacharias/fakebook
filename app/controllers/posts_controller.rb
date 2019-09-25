@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[destroy show update upvote downvote]
 
   def index
-    @posts = Post.all.order(:cached_votes_score => :desc)
+    @posts = Post.all.order(:desc)
   end
 
   def upvote
