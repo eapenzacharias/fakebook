@@ -22,4 +22,9 @@ RSpec.describe Comment, type: :model do
     @comment.destroy
     expect(@post.comments.count).to eql(0)
   end
+
+  it 'invalid without a body' do
+    comment = @user.comments.create(body: '', post: @post)
+    expect(comment).to_not be_valid 
+  end
 end
