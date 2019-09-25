@@ -6,6 +6,8 @@ This is a project for Rails in the Ruby on Rails part of the main curriculum for
 
 #### [Assignment link](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project)
 
+#### [ER Digram](https://www.lucidchart.com/invitations/accept/47045662-2d3c-48cd-9ffd-21d4b66c9064)
+
 #### [View in broswer](***Add live link***)
 
 #### Live ScreenShot of the page
