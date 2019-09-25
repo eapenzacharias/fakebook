@@ -8,18 +8,6 @@ class PostsController < ApplicationController
     @posts = Post.all.order(:desc)
   end
 
-  def upvote
-    @post = Post.find(params[:id])
-    @post.upvote_by current_user
-    redirect_to feed_path
-  end
-
-  def downvote
-    @post = Post.find(params[:id])
-    @post.downvote_by current_user
-    redirect_to feed_path
-  end
-
   def new
     Post.new
   end
