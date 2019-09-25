@@ -10,30 +10,42 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-light bg-dark">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Fakebook</a>
-        </div>
-        <span class="nav navbar-nav">
-        <span class="nav-item"><%= link_to 'Home', '/' %></span>
-        <span class="nav-item"><%= link_to 'All Users', '/users' %></span>
-        </span>
-        <span class="nav navbar-nav navbar-right">
-        <% if signed_in? %>
-            <span class="nav-item"><%= link_to "#{current_user.name}'s Feed", current_user %></span>
-            <span class="nav-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></span>
-        <% else %>
-            <span class="nav-item"><%= link_to new_user_session_path do %> <span>Login <% end %></span>
-            <span class="nav-item"><%= link_to new_user_registration_path do %> <span>Sign Up <% end %></span>
-          <% end %>
-        </span>
+  <nav class="navbar navbar-inverse bg-dark">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Fakebook</a>
       </div>
-    </nav> 
-    <% if notice%>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <%= link_to 'Home', '/' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'All Users', '/users' %>
+        </li>
+      </ul>
+      <div class="nav navbar-nav navbar-right">
+        <% if signed_in? %>
+          <li class="nav-item">
+            <%= link_to "#{current_user.name}'s Feed", current_user %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to new_user_session_path do %><%end%>
+            Login
+          </li>
+          <li class="nav-item">
+            <%= link_to new_user_registration_path do %><%end%>
+            Sign up
+          </li>
+        <%end%>
+      </div>
+  </nav>
+    <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <%end%>
-    <% if alert%>
+    <% if alert %>
       <p class="alert alert-danger"><%= notice %></p>
     <%end%>
     <%= yield %>

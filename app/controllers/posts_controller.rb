@@ -2,7 +2,23 @@
 
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only: %i[destroy show update]
+  before_action :set_post, only: %i[destroy show update upvote downvote]
+
+  def index
+    @posts = Post.all.order(:desc)
+  end
+
+  def upvote
+    @post = Post.find(params[:id])
+    @post.upvote_by current_user
+    redirect_to feed_path
+  end
+
+  def downvote
+    @post = Post.find(params[:id])
+    @post.downvote_by current_user
+    redirect_to feed_path
+  end
 
   def new
     Post.new
@@ -16,7 +32,7 @@ class PostsController < ApplicationController
     else
       flash[:alert] = 'Error. Try again!'
     end
-    redirect_to posts_path
+    redirect_to feed_path
   end
 
   def destroy
