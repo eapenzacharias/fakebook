@@ -10,4 +10,10 @@ class UsersController < ApplicationController
   def index
     @users = User.order(created_at: :desc)
   end
+
+  def confirm_friend(user)
+    friendship1 = inverse_friendships.find { |friendship| friendship.user == user }
+    friendship1.confirmed = true
+    friendship1.save
+  end
 end

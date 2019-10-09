@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'friends/index'
   get 'friends/destroy'
-  post '/friendshipconfirm', to: 'user#confirm_friend'
+  post '/friendshipconfirm', to: 'users#confirm_friend'
   resources :friend_requests
   resources :friendships
 

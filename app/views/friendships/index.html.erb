@@ -17,7 +17,7 @@
         <% @friendship_requests.each do |user| %>
           <li>
             <p><%= link_to "#{user.name}", user_path(user) %> <%= user.email %></p>
-            <p><%= link_to "Confirm Friendship", friendshipconfirm_path(user), method: :post %></p>
+            <p><%= button_to "Confirm Friendship", friendshipconfirm_path(user)%></p>
           </li>
         <% end %>
       </ul>
