@@ -1,0 +1,42 @@
+<div class='row friends'>
+  <div class='col-md-7'>
+    <h3><%= "#{current_user.name.capitalize}'s" %> Friends</h3>
+    <ul>
+      <% @friends.each do |user| %>
+        <li>
+          <p><strong><%= "#{user.name.capitalize}" %> </strong><%="#{user.email}" %> </p>
+          <p><%= link_to 'Profile', user_path(user) %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class='col-md-5'>
+    <h3>Friend Requests</h3>
+    <% if @friendship_requests %>
+      <ul>
+        <% @friendship_requests.each do |user| %>
+          <li>
+            <p><%= link_to "#{user.name}", user_path(user) %> <%= user.email %></p>
+            <p><%= link_to "Confirm Friendship", friendshipconfirm_path(user), method: :post %></p>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>You don't have Friend Requests</p>
+    <% end %>
+
+    <h3>Pending Friends</h3>
+    <% if @friendship_requests %>
+      <ul>
+        <% @pending_friends.each do |user| %>
+          <li>
+            <p><%= link_to "#{user.name}", user_path(user) %> <%= user.email %></p>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>You don't have Pending Requests</p>
+    <% end %>
+  </div>
+</div>
+

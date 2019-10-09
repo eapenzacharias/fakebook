@@ -7,6 +7,12 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  get 'friends/index'
+  get 'friends/destroy'
+  post '/friendshipconfirm', to: 'user#confirm_friend'
+  resources :friend_requests
+  resources :friendships
+
   devise_scope :user do
     authenticated :user do
       root 'feed#index', as: :authenticated_root

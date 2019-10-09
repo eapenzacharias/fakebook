@@ -1,0 +1,31 @@
+<%= form_for(@user, url: user_path) do |f| %>
+  <div class="container container-show-user edit">
+    <div class="row">
+      <div class="col-7">
+        <div class="container">
+          <div class="col-12 user-name"><%= f.text_field :name %></div>
+          <div class="col-12 user-email"><%= f.text_field :email %></div>
+          <div class="col-12 user-birthday"><%= f.date_field :birth_day %></div>
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="container">
+          <!-- User Image Container -->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <div class="col-12">About</div>
+        <div class="container user-description">
+          <%= f.text_field :bio %>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="actions">
+        <%= f.submit "Update", class: "btn update-user-data" %>
+      </div>
+    </div>
+  </div>
+<% end %>
