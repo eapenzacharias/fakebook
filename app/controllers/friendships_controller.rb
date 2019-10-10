@@ -1,6 +1,9 @@
 # frozen_string_literal: true
+require 'friendship_methods'
 
 class FriendshipsController < ApplicationController
+  include FriendshipMethods
+
   def index
     @friendship_requests = current_user.friend_requests
     @pending_friends = current_user.pending_friends
@@ -8,30 +11,27 @@ class FriendshipsController < ApplicationController
   end
 
   def create
-    @friendship = current_user.friendships.build(friend_id: params[:friend_id])
-    if @friendship.save
-      flash[:notice] = 'Added friend.'
+    @friendship_request = Friendship.new(friend_id: params[:id], confirmed: false)
+    @friendship_request.user_id = current_user.id
+    other = User.find_by(id: params[:id])
+    if @friendship_request.save
+      flash[:success] = "You send a friend request to #{other.name}"
+    elsif current_user.friend?(other)
+      flash[:alert] = "You and #{other.name} are already friends"
     else
-      flash[:error] = 'Unable to add friend.'
+      flash[:error] = "You already sent a friend request to  #{other.name}"
     end
-    redirect_to current_user
-  end
-
-  def destroy
-    @friendship = current_user.friendships.find(params[:id])
-    @friendship.destroy
-    flash[:notice] = 'Removed friendship.'
-    redirect_to current_user
+    redirect_to friendships_path
   end
 
   def update
-    user = User.find_by(id: params[:id])
-    if current_user.confirm_friend(user)
+    f = Friendship.find_by(friend_id: current_user.id, user_id: params[:id])
+    user = User.find_by(id: f.user_id)
+    if f.confirm_friendship
       flash[:success] = "Now you are a #{user.name}'s friend"
     else
       flash[:error] = 'There was a problem'
     end
-    redirect_to 'feed/index'
+    redirect_to friendships_path
   end
-
 end

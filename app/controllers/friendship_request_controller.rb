@@ -6,7 +6,7 @@ class FriendshipRequestController < ApplicationController
   end
 
   def create
-    @friendship_request = Friendship.new(friendship_params)
+    @friendship_request = Friendships.new(friendship_params)
     @friendship_request.user_id = current_user.id
     if friendship_request.save
       flash[:success] = 'new request sent'

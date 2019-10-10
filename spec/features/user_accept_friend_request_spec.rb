@@ -5,10 +5,10 @@ RSpec.feature 'User accept friend request' do
   scenario 'log in and Send friend request' do
     @user = FactoryBot.create(:user)
     @other = FactoryBot.create(:user)
-    login_as(@user, scope: :user)
-    visit users_index_path
+    login_as(@user, :scope => :user)
+    visit users_path
     first(:link, 'Send Friend Request').click
-    logout
+    logout(:user)
     login_as(@other, scope: :user)
     visit friendships_path
     expect(page).to have_content("#{@user.name} #{@user.email}")
