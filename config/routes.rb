@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   get 'friends/index'
   get 'friends/destroy'
   get '/users', to: 'users#show'
-  post '/friendshipconfirm', to: 'friendship#confirm_friend'
+  post '/friendshipconfirm', to: 'friendships#confirm_friend'
   resources :friendship_request
-  resources :friendship
+  resources :friendships
 
   devise_scope :user do
     authenticated :user do
