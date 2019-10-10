@@ -16,6 +16,10 @@ class FriendshipRequestController < ApplicationController
     redirect_to users_index_path
   end
 
+  def show
+    @friendship_request = current_user.friend_requests
+  end
+
   private
 
   def friendship_params

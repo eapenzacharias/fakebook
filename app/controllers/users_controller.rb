@@ -6,8 +6,8 @@ class UsersController < ApplicationController
 
   before_action :authenticate_user!
   def show
-    @user = user.find(params[:id])
-    @recent_posts = @user.posts
+    @users = User.find_by(params[:user_id])
+    @recent_posts = @users.posts
   end
 
   def index
