@@ -28,12 +28,12 @@ RSpec.describe Friendship, type: :model do
 
   context 'The friendship relationship is not symmetrical' do
     it "carlos is antonios'friend but antonio is not carlos's friend" do
-      carlos = FactoryBot.create(:user)
-      antonio = FactoryBot.create(:user)
-      expect(FactoryBot.create(:friendship, user: carlos, friend: antonio)).to be_valid
-      antonio.confirm_friend(antonio.friend_requests[0])
-      expect(antonio.friends.length).to eql(0)
-      expect(carlos.friends.length).to eql(1)
+      george = FactoryBot.create(:user)
+      sam = FactoryBot.create(:user)
+      expect(FactoryBot.create(:friendship, user: george, friend: sam)).to be_valid
+      sam.confirm_friend(sam.friend_requests[0])
+      expect(sam.friends.length).to eql(0)
+      expect(george.friends.length).to eql(1)
     end
   end
 end

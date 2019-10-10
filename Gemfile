@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.5.1'
 
-#gem 'better_errors', '~> 2.5', '>= 2.5.1'
+gem 'better_errors', '~> 2.5', '>= 2.5.1'
 gem 'binding_of_caller', '~> 0.8.0'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'devise', '~> 4.7'
@@ -67,7 +67,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  # gem 'capybara', '>= 2.15'
+  gem 'capybara'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'guard', '2.13.0'
@@ -83,7 +83,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
   gem 'guard-livereload'
   gem 'guard-rspec'
-  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
+  gem 'rspec-rails', '~> 3.9'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
