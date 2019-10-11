@@ -14,13 +14,13 @@ module FriendshipMethods
     friendships.map { |friendship| friendship.friend if friendship.confirmed == false}.compact
   end
 
-  def friend_requests
-    # inverse_friendships.map { |friendship| friendship.user }.compact
-    friendships.map { |friendship| friendship.friend if friendship.confirmed == false}.compact
+  def pending_requests
+    inverse_friendships.map { |friendship| friendship.user if friendship.confirmed == false }.compact
+    #friendships.map { |friendship| friendship.friend}.compact
   end
 
-  def confirm_friend(user)
-    friendship1 = inverse_friendships.find { |friendship| friendship.user == user }
+  def confirm_friend
+    friendship1 = inverse_friendships.find { |friendship| friendship.user }
     friendship1.confirmed = true
     friendship1.save
   end

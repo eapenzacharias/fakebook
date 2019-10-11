@@ -5,7 +5,7 @@ class FriendshipsController < ApplicationController
   include FriendshipMethods
 
   def index
-    @friendship_request = current_user.friend_requests
+    @pending_requests = current_user.pending_requests
     @pending_friends = current_user.pending_friends
     @friends = current_user.friends
   end
