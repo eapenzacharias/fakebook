@@ -12,9 +12,9 @@
   </div>
   <div class='col-md-5'>
     <h3>Friend Requests</h3>
-    <% if @friendship_requests %>
+    <% if @friend_requests %>
       <ul>
-        <% @friendship_requests.each do |user| %>
+        <% @friend_requests.each do |user| %>
           <li>
             <p><%= link_to "#{user.name}", user_path(user) %> <%= user.email %></p>
             <p><%= button_to "Confirm Friendship", friendshipconfirm_path(user)%></p>
@@ -26,7 +26,7 @@
     <% end %>
 
     <h3>Pending Friends</h3>
-    <% if @friendship_requests %>
+    <% if @pending_friends %>
       <ul>
         <% @pending_friends.each do |user| %>
           <li>
