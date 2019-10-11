@@ -13,7 +13,7 @@ class FriendshipsController < ApplicationController
   def create
     @friendship_request = Friendship.new(friend_id: params[:id], confirmed: false)
     @friendship_request.user_id = current_user.id
-    other = User.find_by(id: params[:id])
+    other = User.find_by(params[:id])
     if @friendship_request.save
       flash[:success] = "You send a friend request to #{other.name}"
     elsif current_user.friend?(other)
