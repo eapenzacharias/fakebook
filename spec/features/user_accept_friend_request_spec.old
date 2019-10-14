@@ -6,7 +6,7 @@ RSpec.feature 'User accept friend request' do
     @user = FactoryBot.create(:user)
     @other = FactoryBot.create(:user)
     login_as(@users, :scope => :user)
-    visit friendship_request_path
+    visit friendships_path
     first(:link, 'Add Friend').click
     logout(:user)
     login_as(@other, scope: :user)

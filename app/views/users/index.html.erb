@@ -6,7 +6,7 @@
         <div class="user container">
           <div class="row userbar">
             <div class="col-6 my-auto name"> <%= link_to "#{user.name} #{user.l_name}".html_safe , users_path(user), class: "btn btn-success" %></div>
-            <div class="col my-auto"><%#= user.birthday.strftime("Date of birth: %d/%m/%Y") %></div>
+            <div class="col my-auto"><%= user.birthday.strftime("Date of birth: %d/%m/%Y") %></div>
           </div>
           <div class="row">
             <div class="col-8 add-user-name">

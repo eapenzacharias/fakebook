@@ -17,15 +17,13 @@
       <ul>
         <% @pending_friendships.each do |user| %>
           <li>
-          <% x = User.find_by(id: user.friend_id)%>
+          <% x = User.find_by(id: user.user_id)%>
             <p>
               <%= link_to "#{x.name}", user_path(user) %> 
               <%= x.email %>
             </p>
             <p>
-              <%= button_to "Confirm Friendship", friendship_path(:id => user), method: 'patch'%>
-              <%#= button_to "Accept", { action: "update", controller: 'friendships' }, params:{ friend_id: update.id }, class: "accept" %>
-              <%#= button_to "Decline", friend_request_path(friend_request), method: :delete,remote: true,class: "decline"%>
+              <%= link_to "Confirm Friendship", friendship_path(:id => user), method: 'patch'%>
             </p>
           </li>
         <% end %>

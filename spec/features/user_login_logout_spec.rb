@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-RSpec.feature 'User Logged In' do
-  scenario 'inspects the webapp links' do
+RSpec.feature 'User Logs in and logs out' do
+  scenario 'Test the log in and the log out' do
     user = FactoryBot.create(:user)
     visit new_user_session_path
     within('form') do
@@ -16,5 +16,7 @@ RSpec.feature 'User Logged In' do
     expect(page).to have_content('Friends')
     expect(page).to have_content('Feed')
     expect(page).to have_content('Log Out')
+    click_on 'Log Out'
+    respond_to be_success
   end
 end
