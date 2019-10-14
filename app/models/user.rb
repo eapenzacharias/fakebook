@@ -22,10 +22,12 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   def pending_friendships
-    friendships.where(confirmed: false) + inverse_friendships.where(confirmed: false)
+    #friendships.where(confirmed: false) 
+    inverse_friendships.where(confirmed: false)
   end
 
   def confirmed_friendships
-    friendships.where(confirmed: true) + inverse_friendships.where(confirmed: true)
+    friendships.where(confirmed: true)
   end
+
 end

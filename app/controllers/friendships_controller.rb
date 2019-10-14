@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class FriendshipsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @pending_friendships = current_user.pending_friendships
     @confirmed_friendships = current_user.confirmed_friendships
@@ -22,10 +24,10 @@ class FriendshipsController < ApplicationController
   end
 
   def update
-    f = Friendship.find_by(friend_id: current_user.id, user_id: params[:id])
+    f = Friendship.find_by(id: params[:id])
     user = User.find_by(id: f.user_id)
     if f.confirm_friendship
-      flash[:success] = "Now you are a #{users.name}'s friend"
+      flash[:success] = "Now you are a #{user}'s friend"
     else
       flash[:error] = 'There was a problem'
     end

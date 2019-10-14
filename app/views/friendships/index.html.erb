@@ -3,8 +3,9 @@
     <h3><%= "#{current_user.name.capitalize}'s" %> Friends</h3>
     <ul>
       <% @friendships.each do |user| %>
+      <% x = User.find_by(id: user.friend_id)%>
         <li>
-          <p><strong><%= "#{user.name.capitalize}" %> </strong><%="#{user.email}" %> </p>
+          <p><strong><%= "#{x.name}" %> </strong><%="#{x.email}" %> </p>
           <p><%= link_to 'Profile', user_path(user) %></p>
         </li>
       <% end %>
@@ -16,12 +17,13 @@
       <ul>
         <% @pending_friendships.each do |user| %>
           <li>
+          <% x = User.find_by(id: user.friend_id)%>
             <p>
-              <%= link_to "#{user}", user_path(user) %> 
-              <%= user.name %>
+              <%= link_to "#{x.name}", user_path(user) %> 
+              <%= x.email %>
             </p>
             <p>
-              <%= button_to "Confirm Friendship", friendships_path(user)%>
+              <%= button_to "Confirm Friendship", friendship_path(:id => user), method: 'patch'%>
               <%#= button_to "Accept", { action: "update", controller: 'friendships' }, params:{ friend_id: update.id }, class: "accept" %>
               <%#= button_to "Decline", friend_request_path(friend_request), method: :delete,remote: true,class: "decline"%>
             </p>
