@@ -1,13 +1,10 @@
 # frozen_string_literal: true
-require 'friendship_methods'
 
 class FriendshipsController < ApplicationController
-  include FriendshipMethods
-
   def index
-    @pending_requests = current_user.pending_requests
-    @pending_friends = current_user.pending_friends
-    @friends = current_user.friends
+    @pending_friendships = current_user.pending_friendships
+    @confirmed_friendships = current_user.confirmed_friendships
+    @friendships = current_user.friendships
   end
 
   def create

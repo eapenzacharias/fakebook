@@ -10,9 +10,9 @@
           <li><%= link_to "Users", users_path %></li>
           <li>
             <%= link_to "Friends", friendships_path %>
-            <%if current_user.pending_requests.count > 0 %>
+            <%if current_user.pending_friendships.count > 0 %>
               <span>
-                <%= current_user.pending_requests.count %>
+                <%= current_user.pending_friendships.count %>
               </span>
             <%end%>
           </li>

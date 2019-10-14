@@ -2,7 +2,7 @@
   <div class='col-md-7'>
     <h3><%= "#{current_user.name.capitalize}'s" %> Friends</h3>
     <ul>
-      <% @friends.each do |user| %>
+      <% @friendships.each do |user| %>
         <li>
           <p><strong><%= "#{user.name.capitalize}" %> </strong><%="#{user.email}" %> </p>
           <p><%= link_to 'Profile', user_path(user) %></p>
@@ -14,29 +14,22 @@
     <h3>Friend Requests</h3>
     <% if true %>
       <ul>
-        <% @pending_requests.each do |user| %>
+        <% @pending_friendships.each do |user| %>
           <li>
-            <p><%= link_to "#{user.name}", user_path(user) %> <%= user.email %></p>
-            <p><%= button_to "Confirm Friendship", friendshipsconfirm_path(user)%></p>
+            <p>
+              <%= link_to "#{user}", user_path(user) %> 
+              <%= user.name %>
+            </p>
+            <p>
+              <%= button_to "Confirm Friendship", friendships_path(user)%>
+              <%#= button_to "Accept", { action: "update", controller: 'friendships' }, params:{ friend_id: update.id }, class: "accept" %>
+              <%#= button_to "Decline", friend_request_path(friend_request), method: :delete,remote: true,class: "decline"%>
+            </p>
           </li>
         <% end %>
       </ul>
     <% else %>
       <p>You don't have Friend Requests</p>
     <% end %>
-
-    <h3>Pending Friends</h3>
-    <% if @pending_friends %>
-      <ul>
-        <% @pending_friends.each do |user| %>
-          <li>
-            <p><%= link_to "#{user.name}", user_path(user) %> <%= user.email %></p>
-          </li>
-        <% end %>
-      </ul>
-    <% else %>
-      <p>You don't have Pending Requests</p>
-    <% end %>
   </div>
 </div>
-

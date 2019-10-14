@@ -1,10 +1,8 @@
 # frozen_string_literal: true
-require 'friendship_methods'
 
 class User < ApplicationRecord
-  include FriendshipMethods
-
   has_many :friendships
+  has_many :inverse_friendships
   has_many :friends, through: :friendships
   has_and_belongs_to_many :friends
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
@@ -22,4 +20,12 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
+
+  def pending_friendships
+    friendships.where(confirmed: false) + inverse_friendships.where(confirmed: false)
+  end
+
+  def confirmed_friendships
+    friendships.where(confirmed: true) + inverse_friendships.where(confirmed: true)
+  end
 end
