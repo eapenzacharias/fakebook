@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'friendship_methods'
 
 class UsersController < ApplicationController

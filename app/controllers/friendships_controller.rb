@@ -26,7 +26,7 @@ class FriendshipsController < ApplicationController
     f = Friendship.find_by(id: params[:id])
     user = User.find_by(id: f.user_id)
     if f.confirm_friendship
-      flash[:success] = "Now you are a #{@user}'s friend"
+      flash[:success] = "Now you are a #{user}'s friend"
     else
       flash[:error] = 'There was a problem'
     end

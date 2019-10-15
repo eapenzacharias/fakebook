@@ -4,9 +4,8 @@ class User < ApplicationRecord
   has_many :friendships
   has_many :inverse_friendships
   has_many :friends, through: :friendships
-  has_and_belongs_to_many :friends
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
-  has_many :inverse_friends, :through => :inverse_friendships, :source => :user
+  has_many :inverse_friends, through: :inverse_friendships, source: :user
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
   devise :omniauthable
@@ -20,12 +19,10 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   def pending_friendships
-    #friendships.where(confirmed: false) 
     inverse_friendships.where(confirmed: false)
   end
 
   def confirmed_friendships
     friendships.where(confirmed: true)
   end
-
 end
