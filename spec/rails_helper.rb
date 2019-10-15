@@ -1,6 +1,6 @@
+include Warden::Test::Helpers
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
-include Warden::Test::Helpers
 ENV['RAILS_ENV'] ||= 'test'
 
 require File.expand_path('../config/environment', __dir__)
