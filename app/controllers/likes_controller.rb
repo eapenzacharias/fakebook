@@ -7,6 +7,7 @@ class LikesController < ApplicationController
       flash[:notice] = "You can't like more than once"
     else
       @post.likes.create(user_id: current_user.id)
+      flash[:notice] = "You liked the post"
     end
     redirect_to request.referrer
   end

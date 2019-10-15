@@ -16,9 +16,9 @@ class PostsController < ApplicationController
     post = current_user.posts.build(post_params)
 
     if post.save
-      flash[:notice] = 'Post was sucessful'
+      flash[:notice] = 'Your post has been created'
     else
-      flash[:alert] = 'Error. Try again!'
+      flash[:alert] = "Content can't be blank"
     end
     redirect_to feed_path
   end
