@@ -1,0 +1,35 @@
+<div class='row friends'>
+  <div class='col-md-7'>
+    <h3><%= "#{current_user.name.capitalize}'s" %> Friends</h3>
+    <ul>
+      <% @friendships.each do |user| %>
+      <% x = User.find_by(id: user.friend_id)%>
+        <li>
+          <p><strong><%= "#{x.name}" %> </strong><%="#{x.email}" %> </p>
+          <p><%= link_to 'Profile', user_path(user) %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class='col-md-5'>
+    <h3>Friend Requests</h3>
+    <% if true %>
+      <ul>
+        <% @pending_friendships.each do |user| %>
+          <li>
+          <% x = User.find_by(id: user.user_id)%>
+            <p>
+              <%= link_to "#{x.name}", user_path(user) %> 
+              <%= x.email %>
+            </p>
+            <p>
+              <%= link_to "Confirm Friendship", friendship_path(:id => user), method: 'patch'%>
+            </p>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>You don't have Friend Requests</p>
+    <% end %>
+  </div>
+</div>

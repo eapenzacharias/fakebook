@@ -1,0 +1,15 @@
+
+  <div class='col-md-5'>
+    <h3>Friend Requests</h3>
+    <% if @friendship_requests %>
+      <ul>
+        <% @friendship_requests.each do |user| %>
+          <li>
+            <p><%= link_to "#{user.name}", user_path(user) %> <%= user.email %></p>
+            <p><%= button_to "Confirm Friendship", friendshipconfirm_path(user)%></p>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>You don't have Friend Requests</p>
+    <% end %>

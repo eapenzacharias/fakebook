@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
+require 'friendship_methods'
+
 class UsersController < ApplicationController
+  include FriendshipMethods
   before_action :authenticate_user!
   def show
-    @user = User.find(params[:id])
-    @recent_posts = @user.posts
+    @users = User.find_by(params[:user_id])
+    @recent_posts = @users.posts
   end
 
   def index

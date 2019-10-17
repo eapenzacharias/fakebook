@@ -35,7 +35,7 @@ RSpec.describe User, type: :model do
 
     it 'is invalid with a duplicate email address' do
       user = build(:user)
-      user.valid?
+      expect(user).to_not be_valid?
       expect(user.errors[:email]).to include('has already been taken')
     end
 
