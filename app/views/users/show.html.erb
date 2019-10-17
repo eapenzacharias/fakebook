@@ -1,31 +1,31 @@
-<ul class="users">
-  <li><%= @users.name %></li>
-  <li><%= @users.email %></li>
-  <li><%= @users.created_at %></li>
-</ul>
+<div class="users">
+  <h1><%= @user.name %></h1>
+  <h3><%= @user.email %></h3>
+  <p><%= @user.created_at %></p>
+</div>
 <div class='col-md-7'>
-    <h3><%= "#{@users.name.capitalize}'s" %> Friends</h3>
+    <h3><%= "#{@user.name.capitalize}'s" %> Friends</h3>
     <ul>
-    <%@friendships = Friendship.where(user_id: @users.id, confirmed: true)%>
+    <%@friendships = Friendship.where(user_id: @user.id, confirmed: true)%>
       <% @friendships.each do |user| %>
       <% x = User.find_by(id: user.friend_id)%>
         <li>
           <p><strong><%= "#{x.name}" %> </strong><%="#{x.email}" %> </p>
-          <p><%= link_to 'Profile', user_path(x.id) %></p>
+          <p><%= link_to 'Profile', user_path(x) %></p>
         </li>
       <% end %>
     </ul>
   </div>
 <div class='col-md-5'>
     <h3>Mutual Friends</h3>
-    <%@mutual_friendships = Friendship.where(user_id: current_user, confirmed: true, friend_id: (Friendship.where(user_id: @users.id, confirmed: true).select('friend_id'))) %>
+    <%@mutual_friendships = Friendship.where(user_id: current_user, confirmed: true, friend_id: (Friendship.where(user_id: @user.id, confirmed: true).select('friend_id'))) %>
     <%if @mutual_friendships%>
       <ul>
         <% @mutual_friendships.each do |user| %>
           <li>
           <% x = User.find_by(id: user.friend_id)%>
             <p>
-              <%= link_to "#{x.name}", user_path(x.id) %> 
+              <%= link_to "#{x.name}", user_path(x) %> 
               <%= x.email %>
             </p>
           </li>

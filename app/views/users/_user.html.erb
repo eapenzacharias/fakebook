@@ -1,7 +1,7 @@
 <li>
   <p><strong><%= "#{user.name.capitalize}" %>   </strong><%="#{user.email}" %> </p>
   <p>
-    <%= link_to 'Profile', user_path(user) %>
+    <%= link_to 'Profile', user_path(params[:user_id user.id]) %>
     <% if friend_requested?(user)%>
       you requested to be friends
     <% else %>

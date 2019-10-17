@@ -1,6 +1,8 @@
 # frozen_string_literal: true
+require 'friendship_methods'
 
 class FriendshipsController < ApplicationController
+  include FriendshipMethods
   before_action :authenticate_user!
   def index
     @pending_friendships = current_user.pending_friendships
@@ -33,4 +35,5 @@ class FriendshipsController < ApplicationController
     end
     redirect_to friendships_path
   end
+
 end

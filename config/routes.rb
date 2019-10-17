@@ -25,4 +25,5 @@ Rails.application.routes.draw do
   get '/posts', to: 'feed#index'
   get '/feed', to: 'feed#index'
   get '/users', to: 'users#index'
+  get '/users/', to: 'users#show'
 end
