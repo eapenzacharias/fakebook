@@ -1,7 +1,7 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <div class="navbar-header">
-        <%= link_to "Fakebook", 'feed#index', class: 'navbar-brand', id: 'logo' %>
+        <%= link_to "Fakebook", feed_path, class: 'navbar-brand', id: 'logo' %>
     </div>
     <nav>
       <ul class="nav navbar-nav navbar-right">
@@ -16,7 +16,7 @@
               </span>
             <%end%>
           </li>
-          <li><%= link_to "Feed", 'feed#index' %></li>
+          <li><%= link_to "Feed", feed_path %></li>
           <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
