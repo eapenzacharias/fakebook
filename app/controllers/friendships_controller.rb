@@ -6,6 +6,7 @@ class FriendshipsController < ApplicationController
     @pending_friendships = current_user.pending_friendships
     @confirmed_friendships = current_user.confirmed_friendships
     @friendships = current_user.friendships
+    
   end
 
   def create
