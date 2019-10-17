@@ -9,7 +9,11 @@ class UsersController < ApplicationController
     @recent_posts = @user.posts
   end
 
+  def self.all_except(user)
+    where.not(id: user)
+  end
+
   def index
-    @users = User.except(current_user).except(current_user.friends).paginate(page: params[:page], per_page: 10)
+    @users = User.where.not(id: current_user.friends).where.not(id: current_user).paginate(page: params[:page], per_page: 10)
   end
 end
