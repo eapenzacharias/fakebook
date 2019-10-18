@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'friendship_methods'
 
 class FriendshipsController < ApplicationController
@@ -8,7 +9,6 @@ class FriendshipsController < ApplicationController
     @pending_friendships = current_user.pending_friendships
     @confirmed_friendships = current_user.confirmed_friendships
     @friendships = current_user.friendships
-    
   end
 
   def create
@@ -35,5 +35,4 @@ class FriendshipsController < ApplicationController
     end
     redirect_to friendships_path
   end
-
 end
