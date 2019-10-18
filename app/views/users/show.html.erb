@@ -22,7 +22,6 @@
   <%if @user != current_user %>
     <div class='col-md-5'>
       <h3>Mutual Friends</h3>
-      <% @mutual_friendships = Friendship.where(user_id: current_user, confirmed: true, friend_id: (Friendship.where(user_id: @user.id, confirmed: true).select('friend_id'))) %>
       <%if @mutual_friendships%>
         <ul>
           <% @mutual_friendships.each do |user| %>
