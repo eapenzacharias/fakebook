@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     @mutual_friendships = Friendship.where(user_id: current_user, confirmed: true,
                                            friend_id: Friendship.where(user_id: @user.id,
                                                                        confirmed: true).select('friend_id'))
+    @friendships = Friendship.where(user_id: @user.id, confirmed: true)
   end
 
   def self.all_except(user)

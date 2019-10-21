@@ -9,7 +9,6 @@
 <div class='col-md-7'>
     <h3><%= "#{@user.name.capitalize}'s" %> Friends</h3>
     <ul>
-    <%@friendships = Friendship.where(user_id: @user.id, confirmed: true)%>
       <% @friendships.each do |user| %>
       <% x = User.find_by(id: user.friend_id)%>
         <li>
