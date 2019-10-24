@@ -12,12 +12,13 @@ class FriendshipsController < ApplicationController
   end
 
   def create
-    @friendship_request = Friendship.new(friend_id: params[:id], confirmed: false)
-    @friendship_request.user_id = current_user.id
+    @friendship_request = current_user.friendships.build(friend_id: params[:friend_id], confirmed: false)
+    #@friendship_request = Friendship.new(friend_id: params[:id], confirmed: false)
+    
     user = User.find_by(id: params[:id])
     if @friendship_request.save
       flash[:success] = "You send a friend request to #{user}"
-    elsif current_user.friends?(user)
+    elsif current_user.friend?(user)
       flash[:alert] = "You and #{user} are already friends"
     else
       flash[:error] = "You already sent a friend request to  #{user}"
