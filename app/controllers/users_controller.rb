@@ -11,8 +11,8 @@ class UsersController < ApplicationController
                                            friend_id: Friendship.where(user_id: @user.id,
                                                                        confirmed: true).select('friend_id'))
     @friendships = Friendship.where(user_id: @user.id, confirmed: true)
-    @received_request = Friendship.find_by(user_id: @user, confirmed: false, friend_id: current_user)
-    @pending_request = Friendship.find_by(user_id: current_user, confirmed: false, friend_id: @user)
+    @request_received = Friendship.where(user_id: @user.id, confirmed: false, friend_id: current_user)
+    @pending_request = Friendship.where(user_id: current_user, confirmed: false, friend_id: @user.id)
   end
 
   def self.all_except(user)
@@ -22,6 +22,5 @@ class UsersController < ApplicationController
   def index
     @users = User.where.not(id: current_user).paginate(page: params[:page])
     @friendships = Friendship.where(user_id: current_user, confirmed: true)
-    # .where.not(id: current_user.friends)
   end
 end

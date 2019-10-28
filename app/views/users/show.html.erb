@@ -4,8 +4,8 @@
   <p><%= @user.created_at %></p>
   <% if (!current_user.friends.include? @user)&&(current_user != @user)%>
     <%= link_to "Add Friend", friendships_path(:friend_id => @user), :method => :post, class: "btn btn-primary" %>
-  <% elsif !received_request.nil?%>
-    <%= link_to "Confirm Friendship", friendship_path(:id => @received_request), method: 'patch', class: 'btn btn-info'%>
+  <% elsif !@request_received.nil?%>
+    <%= link_to "Confirm Friendship", friendship_path(:id => @request_received), method: 'patch', class: 'btn btn-info'%>
   <% elsif !@pending_request.nil?%>
     <%= link_to "Friend Request Pending", user_path(current_user), class: "btn btn-warning" %>
   <% elsif (current_user.friends.include? @user)&&(current_user != @user)%>
