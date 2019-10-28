@@ -2,14 +2,16 @@
   <h1><%= @user.name %></h1>
   <h3><%= @user.email %></h3>
   <p><%= @user.created_at %></p>
-  <% if (!current_user.friends.include? @user)&&(current_user != @user)%>
-    <%= link_to "Add Friend", friendships_path(:friend_id => @user), :method => :post, class: "btn btn-primary" %>
-  <% elsif !@request_received.nil?%>
-    <%= link_to "Confirm Friendship", friendship_path(:id => @request_received), method: 'patch', class: 'btn btn-info'%>
-  <% elsif !@pending_request.nil?%>
-    <%= link_to "Friend Request Pending", user_path(current_user), class: "btn btn-warning" %>
-  <% elsif (current_user.friends.include? @user)&&(current_user != @user)%>
-    <%= link_to "Friends", user_path(current_user), class: "btn btn-success" %>
+  <% if current_user != @user%>
+    <% if !(@request_received.nil?)%>
+      <%= link_to "Confirm Friendship", friendship_path(:id => @request_received.id), method: 'patch', class: 'btn btn-info'%>
+    <% elsif !(@pending_request.nil?)%>
+      <%= link_to "Friend Request Pending", user_path(current_user), class: "btn btn-warning" %>
+    <% elsif !current_user.friends.include?(@user) %>
+      <%= link_to "Add Friend", friendships_path(:friend_id => @user), :method => :post, class: "btn btn-primary" %>
+    <% elsif current_user.friends.include?(@user)%>
+      <%= link_to "Friends", user_path(current_user), class: "btn btn-success" %>
+    <% end %>
   <% end %>
 </div>
 <div class='col-md-7'>

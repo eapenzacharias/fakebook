@@ -11,8 +11,8 @@ class UsersController < ApplicationController
                                            friend_id: Friendship.where(user_id: @user.id,
                                                                        confirmed: true).select('friend_id'))
     @friendships = Friendship.where(user_id: @user.id, confirmed: true)
-    @request_received = Friendship.where(user_id: @user.id, confirmed: false, friend_id: current_user)
-    @pending_request = Friendship.where(user_id: current_user, confirmed: false, friend_id: @user.id)
+    @request_received = Friendship.find_by(user_id: @user.id, confirmed: false, friend_id: current_user.id)
+    @pending_request = Friendship.find_by(user_id: current_user, confirmed: false, friend_id: @user.id)
   end
 
   def self.all_except(user)
