@@ -12,7 +12,7 @@
           </div>
           <div class="row">
             <div class="col-4 friendship-form">
-              <% if (!current_user.friends.include? user)&&(current_user != user)%>
+              <% if !(@related.include? user)%>
                 <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post, class: "btn btn-primary" %>
               <% end %>
             </div>

@@ -22,5 +22,7 @@ class UsersController < ApplicationController
   def index
     @users = User.where.not(id: current_user).paginate(page: params[:page])
     @friendships = Friendship.where(user_id: current_user, confirmed: true)
+    @related = User.where(id: Friendship.where(user_id: current_user).select('friend_id'))
+    @related += User.where(id: Friendship.where(friend_id: current_user).select('user_id'))
   end
 end
