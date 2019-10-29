@@ -5,7 +5,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[destroy show update upvote downvote]
 
   def index
-    @posts = Post.all.order(:desc)
+    @posts = Post.where(user_id: current_user.friends).order(created_at: :desc)
+    @posts += Post.where(user_id: current_user)
   end
 
   def new
