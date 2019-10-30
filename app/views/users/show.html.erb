@@ -1,5 +1,49 @@
-<ul class="users">
-  <li><%= @users.name %></li>
-  <li><%= @users.email %></li>
-  <li><%= @users.created_at %></li>
-</ul>
+<div class="users">
+  <h1><%= @user.name %></h1>
+  <h3><%= @user.email %></h3>
+  <p><%= @user.created_at %></p>
+  <% if current_user != @user%>
+    <% if !(@request_received.nil?)%>
+      <%= link_to "Confirm Friendship", friendship_path(:id => @request_received.id), method: 'patch', class: 'btn btn-info'%>
+    <% elsif !(@pending_request.nil?)%>
+      <%= link_to "Friend Request Pending", user_path(current_user), class: "btn btn-warning" %>
+    <% elsif !current_user.friends.include?(@user) %>
+      <%= link_to "Add Friend", friendships_path(:friend_id => @user), :method => :post, class: "btn btn-primary" %>
+    <% elsif current_user.friends.include?(@user)%>
+      <%= link_to "Friends", user_path(current_user), class: "btn btn-success" %>
+    <% end %>
+  <% end %>
+</div>
+<div class='col-md-7'>
+    <h3><%= "#{@user.name.capitalize}'s" %> Friends</h3>
+    <ul>
+      <% @friendships.each do |user| %>
+      <% x = User.find_by(id: user.friend_id)%>
+        <li>
+          <p><strong><%= "#{x.name}" %> </strong><%="#{x.email}" %> </p>
+          <p><%= link_to 'Profile', user_path(x) %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <%if @user != current_user %>
+    <div class='col-md-5'>
+      <h3>Mutual Friends</h3>
+      <%if @mutual_friendships%>
+        <ul>
+          <% @mutual_friendships.each do |user| %>
+            <li>
+            <% x = User.find_by(id: user.friend_id)%>
+              <p>
+                <%= link_to "#{x.name}", user_path(x) %> 
+                <%= x.email %>
+              </p>
+            </li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>You don't have Mutual Friends</p>
+      <% end %>
+    </div>
+  <%end%>
+<div class="row"><%= render "posts/index" %></div>

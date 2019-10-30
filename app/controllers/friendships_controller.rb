@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
+require 'friendship_methods'
+
 class FriendshipsController < ApplicationController
+  include FriendshipMethods
   before_action :authenticate_user!
   def index
     @pending_friendships = current_user.pending_friendships
@@ -10,14 +13,13 @@ class FriendshipsController < ApplicationController
 
   def create
     @friendship_request = current_user.friendships.build(friend_id: params[:friend_id], confirmed: false)
-    @friendship_request.user_id = current_user.id
-    user = User.find_by(id: params[:id])
+    user = User.find_by(id: params[:friend_id])
     if @friendship_request.save
-      flash[:success] = "You send a friend request to #{user}"
-    elsif current_user.friend?(user)
-      flash[:alert] = "You and #{user} are already friends"
+      flash[:success] = "You send a friend request to #{user.name}"
+    elsif current_user.friends.include?(user)
+      flash[:alert] = "You and #{user.name} are already friends"
     else
-      flash[:error] = "You already sent a friend request to  #{user}"
+      flash[:error] = "You already sent a friend request to  #{user.name}"
     end
     redirect_to friendships_path
   end

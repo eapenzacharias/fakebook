@@ -2,11 +2,11 @@
   <div class='col-md-7'>
     <h3><%= "#{current_user.name.capitalize}'s" %> Friends</h3>
     <ul>
-      <% @friendships.each do |user| %>
+      <% @confirmed_friendships.each do |user| %>
       <% x = User.find_by(id: user.friend_id)%>
         <li>
           <p><strong><%= "#{x.name}" %> </strong><%="#{x.email}" %> </p>
-          <p><%= link_to 'Profile', user_path(user) %></p>
+          <p><%= link_to 'Profile', user_path(x) %></p>
         </li>
       <% end %>
     </ul>
@@ -19,7 +19,7 @@
           <li>
           <% x = User.find_by(id: user.user_id)%>
             <p>
-              <%= link_to "#{x.name}", user_path(user) %> 
+              <%= link_to "#{x.name}", user_path(x) %> 
               <%= x.email %>
             </p>
             <p>
