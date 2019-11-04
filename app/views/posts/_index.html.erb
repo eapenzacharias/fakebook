@@ -1,36 +1,36 @@
-<div class="post container">
+<div class="container">
   <% if @recent_posts.nil? %>
     <h3>No posts to display!</h3>
   <% else %>
     <% @recent_posts.each do |post| %>
-      <div class="container">
+      <div class="post container">
         <div class="row postbar">
-          <span class="col-4 my-auto name">
+          <span class="col-12 col-md-4 my-auto name">
             <%= link_to "#{post.user.name}".html_safe , user_path(post.user), class: "btn btn-success" %>
           </span>
-          <% if post.user == current_user %>
-            <span class="col-1 my-auto">
-              <%= link_to "Edit", edit_post_path(post), class: "btn btn-warning btn-xs" %>
-            </span>
-            <span class="col-1 my-auto">
-              <%= link_to "Delete", post_path(post), class: "btn btn-danger btn-xs", method: :delete, action: :destroy %>
-            </span>
-          <% end %>
           <% if post.created_at != post.updated_at %>
-            <span class="col-3 my-auto">
+            <span class="col-6 col-lg-3 my-auto">
               <%= post.updated_at.strftime("Updated at: %d/%m/%Y") %>
             </span>
           <% end %>
-          <span class="col-3 my-auto">
+          <span class="col-6 col-lg-3 my-auto">
             <%= post.created_at.strftime("Posted at: %d/%m/%Y") %>
           </span>
+          <% if post.user == current_user %>
+            <span class="col-6 col-lg-1 my-auto">
+              <%= link_to "Edit", edit_post_path(post), class: "btn btn-warning btn-xs" %>
+            </span>
+            <span class="col-6 col-lg-1 my-auto">
+              <%= link_to "Delete", post_path(post), class: "btn btn-danger btn-xs", method: :delete, action: :destroy %>
+            </span>
+          <% end %>
         </div>
         <div class="row post-content">
           <h5>
             <%= post.content %>
           <h5>
-            <span class="col-1 my-auto"><%= link_to "#{post.likes.count} #{(post.likes.count) == 1 ? 'Like' : 'Likes'}", post_path(post), class: "btn btn-success" %></span>
-            <span class="col-1 my-auto"> <%= link_to "Comments: #{post.comments.count}".html_safe , post_path(post.id), class: "btn btn-success" %></span>
+            <span class="col-1 my-auto"><%= link_to "#{post.likes.count} #{(post.likes.count) == 1 ? 'Like' : 'Likes'}", post_path(post), class: "btn btn-xs" %></span>
+            <span class="col-1 my-auto"> <%= link_to "Comments: #{post.comments.count}".html_safe , post_path(post.id), class: "btn btn-xs" %></span>
 
             <% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
             <% if pre_like %>
