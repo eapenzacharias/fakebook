@@ -1,0 +1,8 @@
+<div class="post container">
+  <div class="newpost row">
+    <%= form_for(@new_post, :html => {:class => "form-inline"}, as: :post, url: posts_path) do |f| %>
+      <%= f.text_area :content, placeholder: "What's in you mind, #{current_user.name}?", class: "form-control col-12" %>
+      <%= f.submit "Post", class: "btn btn-primary btn-sm col-12" %>
+    <% end %>
+  </div>
+</div>

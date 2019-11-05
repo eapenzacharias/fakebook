@@ -1,0 +1,65 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+.container {
+    .post.container {
+        border: 1px solid #dadada;
+        border-radius: 10px;
+        margin: 12px 5px;
+        padding-bottom: 10px;
+        width: 100%;
+        .postbar.row {
+            border-bottom: 1px solid #dadada;
+            color: #000000;
+            padding: 0 5px 5px 5px;
+            margin: 5px 0;
+            width: 100%;
+            .btn {
+                padding: 0 2px;
+                min-width: 60px;
+                a {
+                    color: #ffffff;
+                }
+            }
+            .btn-success {
+                font-weight: 700;
+                margin: 0 5px;
+                width: 100%;
+            }
+        }
+        .post-content.row {
+            padding: 0 15px;
+        }
+    }
+    .newpost.row {
+        padding: 5px;
+        margin: 0;
+        width: 100%;
+        form {
+            width: 100%;
+        }
+        .form-inline {
+            width: 100%;
+        }
+        .form-control {
+            height: 60px;
+            width: 100%;
+            margin: 10px 20px;
+        }
+        .btn {
+            margin: 10px 20px;
+            width: 100%;
+        }
+    }
+}
+
+.form-inline .form-control {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.container {
+    padding-top: 12px;
+}

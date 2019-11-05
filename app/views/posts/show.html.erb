@@ -1,0 +1,10 @@
+<% provide(:title, 'Post') %>
+<ul class='posts-list'>
+  <%= render @post %>
+  <div class="container">
+    <h3>Comments</h3>
+    <br/>
+    <%= render "comments/new" %>
+    <%= render "comments/index" %>
+  </div>
+</ul>
