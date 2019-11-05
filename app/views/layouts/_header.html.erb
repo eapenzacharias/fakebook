@@ -1,27 +1,38 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <div class="navbar-header">
-        <%= link_to "Fakebook", feed_path, class: 'navbar-brand', id: 'logo' %>
-    </div>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <li><%= link_to "Hi,#{current_user.name}", user_path(current_user) %></li>
-          <li><%= link_to "Users", users_path %></li>
-          <li>
-            <%if current_user.pending_friendships.count > 0 %>
-                <%= link_to "Friends [#{current_user.pending_friendships.count}]", friendships_path %>
-            <%else%>
-                <%= link_to "Friends", friendships_path %>
-            <%end%>
-          </li>
-          <li><%= link_to "Feed", feed_path %></li>
-          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
-          <li><%= link_to "Log in", new_user_session_path %></li>
-        <% end %>
-      </ul>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-inverse fixed-top bg-dark navbar-dark">
+  <a class='navbar-brand'><%= link_to "Fakebook", feed_path, class: 'navbar-brand', id: 'logo' %><a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#NavContent" aria-controls="#NavContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse", id='NavContent' >
+    <ul class="nav navbar-nav navbar-right">
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Hi,#{current_user.name}", user_path(current_user), class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Users", users_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%if current_user.pending_friendships.count > 0 %>
+              <%= link_to "Friends [#{current_user.pending_friendships.count}]", friendships_path, class: 'nav-link' %>
+          <%else%>
+              <%= link_to "Friends", friendships_path, class: 'nav-link' %>
+          <%end%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Feed", feed_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'nav-link' %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Sign Up", new_user_registration_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Log in", new_user_session_path, class: 'nav-link' %>
+        </li>
+      <% end %>
+    </ul>
   </div>
-</header>
+</nav>

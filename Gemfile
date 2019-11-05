@@ -3,9 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-# gem 'better_errors', '~> 2.5', '>= 2.5.1'
 gem 'binding_of_caller', '~> 0.8.0'
-gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'bootstrap', '~>4.3.1'
+# gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'devise', '~> 4.7'
 gem 'faker', '~> 1.6', '>= 1.6.3'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
@@ -14,6 +14,7 @@ gem 'image_processing', '~> 1.9', '>= 1.9.3'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 gem 'omniauth-facebook'
 gem 'popper_js', '~> 1.14', '>= 1.14.5'
+gem 'sprockets-rails', '~>3.2.1'
 gem 'will_paginate', '~> 3.2'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
 
