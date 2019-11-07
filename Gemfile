@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.1'
+ruby '2.6.3'
 
+gem 'activestorage', '~> 5.2.3'
+gem 'aws-sdk-s3'
 gem 'binding_of_caller', '~> 0.8.0'
 gem 'bootstrap', '~>4.3.1'
-# gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'devise', '~> 4.7'
 gem 'faker', '~> 1.6', '>= 1.6.3'
 gem 'figaro', '~> 1.1', '>= 1.1.1'

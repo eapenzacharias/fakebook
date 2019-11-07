@@ -8,10 +8,7 @@ This is a project for Rails in the Ruby on Rails part of the main curriculum for
 
 #### [ER Digram](https://www.lucidchart.com/invitations/accept/47045662-2d3c-48cd-9ffd-21d4b66c9064)
 
-#### [View in broswer](***Add live link***)
-
-#### Live ScreenShot of the page
-![ScreenShot](***Add screenshots***)
+#### [View live in broswer](https://microbook.herokuapp.com/)
 
 #### Requirements
 
