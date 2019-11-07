@@ -1,0 +1,21 @@
+{:uriI"“file://app/assets/bootstrap-4.3.1/site/_includes/stylesheet.html?type=text/html&id=4d9789a202a82fb1bc8bb002f4b7e24af639465e2ce8d2070ed8c5ce1399345e:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI">app/assets/bootstrap-4.3.1/site/_includes/stylesheet.html;T:	nameI"site/_includes/stylesheet;T:logical_pathI"#site/_includes/stylesheet.html;T:content_typeI"text/html;T:sourceI"ÿ<!-- Bootstrap core CSS -->
+{%- if jekyll.environment == "production" %}
+<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/bootstrap.min.css" rel="stylesheet" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
+{% else %}
+<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/css/bootstrap.css" rel="stylesheet">
+{% endif -%}
+
+{%- if page.layout == "docs" or page.layout != "examples" -%}
+<!-- Documentation extras -->
+{% if page.layout == "docs" %}
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+{% endif %}
+{% if page.layout != "examples" %}
+<link href="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/css/docs.min.css" rel="stylesheet">
+{% endif %}
+{%- endif -%}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Lfile-digest://app/assets/bootstrap-4.3.1/site/_includes/stylesheet.html;TTF:charsetI"
+utf-8;F:digest"%(°¹ô š­è:Ë:l3Sÿm[>Q¤K&fñ/ËáÀsgÄ:lengthiÿ:dependencies_digest"%ßO‹2ý×XŒUÚxOc©¥›‹pç¤µéûv:idI"E4d9789a202a82fb1bc8bb002f4b7e24af639465e2ce8d2070ed8c5ce1399345e;F:
+mtimel+7„]

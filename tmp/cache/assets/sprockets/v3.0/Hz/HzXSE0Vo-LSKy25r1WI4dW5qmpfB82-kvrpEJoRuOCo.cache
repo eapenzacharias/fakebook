@@ -1,0 +1,60 @@
+{:uriI"êfile://app/assets/bootstrap-4.3.1/site/_layouts/examples.html?type=text/html&id=15bef12a251bee9336af4fd01cc9a6b6602205d2ed644d7ab7dc9121d6dd75bd:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI";app/assets/bootstrap-4.3.1/site/_layouts/examples.html;T:	nameI"site/_layouts/examples;T:logical_pathI" site/_layouts/examples.html;T:content_typeI"text/html;T:sourceI"›<!doctype html>
+<html lang="en"{% if page.html_class %} class="{{ page.html_class }}"{% endif %}>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="{{ site.authors }}">
+    <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+    <title>{{ page.title | smartify }} ¬∑ {{ site.title | smartify }}</title>
+
+    <link rel="canonical" href="{{ site.url | append: page.url }}">
+
+    {% include stylesheet.html %}
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    {%- for css in page.extra_css %}
+    <!-- Custom styles for this template -->
+    <link href="{{ css }}" rel="stylesheet">
+    {%- endfor %}
+  </head>
+  <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+    {{ content }}
+
+    {%- if page.include_js != false -%}
+      <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+      {%- if jekyll.environment == "production" -%}
+        <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/bootstrap.bundle.min.js" integrity="{{ site.cdn.js_bundle_hash }}" crossorigin="anonymous"></script>
+      {%- else -%}
+        <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/bootstrap.bundle.js"></script>
+      {%- endif -%}
+
+      {%- for js in page.extra_js %}
+        <script src="{{ js }}"></script>
+      {%- endfor %}
+    {%- endif -%}
+  </body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Ifile-digest://app/assets/bootstrap-4.3.1/site/_layouts/examples.html;TTF:charsetI"
+utf-8;F:digest"%1”◊–N≈À§(±´%IﬂdI{±œ TÓ∞∏Okìæ:lengthi›:dependencies_digest"%‡\¯ÜB'I^,R`ëÛ/⁄ΩÎÂú’§≠»¸Ç€º¥î÷L:idI"E15bef12a251bee9336af4fd01cc9a6b6602205d2ed644d7ab7dc9121d6dd75bd;F:
+mtimel+7Ñ]

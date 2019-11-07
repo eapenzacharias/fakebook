@@ -1,0 +1,56 @@
+{:uriI"êfile://app/assets/bootstrap-4.3.1/site/_includes/example.html?type=text/html&id=b54552a9d7fbbcae3bf5dfb4c0b5af76437ac927e746b64d2264f5b01e7ec6f2:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI";app/assets/bootstrap-4.3.1/site/_includes/example.html;T:	nameI"site/_includes/example;T:logical_pathI" site/_includes/example.html;T:content_typeI"text/html;T:sourceI"E{%- comment -%}
+  Usage: include example.html content=markup [args],
+  where content is a capture with the HTML content
+
+  args can be one of the following:
+    id - null (default)
+    class - "bd-example" (default)
+    optional: hide_preview - disabled (default)
+    optional: hide_markup - disabled (default)
+{%- endcomment -%}
+
+{%- assign id = include.id -%}
+{%- assign class = include.class -%}
+
+{%- if include.hide_preview == null -%}
+<div{% if id %} id="{{ id }}"{% endif %} class="bd-example{% if class %} {{ class }}{% endif %}">
+  {{- include.content -}}
+</div>
+{%- endif -%}
+
+{%- if include.hide_markup == null -%}
+  {%- highlight html -%}
+    {%- if include.content contains '<svg class="bd-placeholder-img' -%}
+      {%- assign modified_content = include.content
+        | replace: '<svg class="bd-placeholder-img', '‚úÇÔ∏è<svg class="bd-placeholder-img'
+        | replace: '</svg>', '</svg>‚úÇÔ∏è'
+        | split: '‚úÇÔ∏è' -%}
+
+      {%- if include.content contains 'bd-placeholder-img ' -%}
+        {%- assign image_class = include.content
+          | replace_first: 'bd-placeholder-img', 'bd-placeholder-img ‚úÇÔ∏è'
+          | replace: '" width="', '‚úÇÔ∏è" width="'
+          | split: '‚úÇÔ∏è' -%}
+        {%- assign image_class = image_class[1] | replace: 'bd-placeholder-img-lg', '' | strip -%}
+      {%- endif -%}
+
+      {%- for content_chunk in modified_content -%}
+        {%- if content_chunk contains '<svg class="bd-placeholder-img' -%}
+          {%- capture img_placeholder -%}
+            <img src="..." {% if image_class %}class="{{ image_class }}" {% endif %}alt="...">
+          {%- endcapture -%}
+          {{- img_placeholder -}}
+        {%- else -%}
+          {{- content_chunk -}}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- else -%}
+      {{- include.content -}}
+    {%- endif -%}
+  {%- endhighlight -%}
+{%- endif -%}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Ifile-digest://app/assets/bootstrap-4.3.1/site/_includes/example.html;TTF:charsetI"
+utf-8;F:digest"%gâ™Ω“R¯ì¯Á%qm˛ôjH¡£„wÊ∫∞\ô‡/ :lengthiE:dependencies_digest"%)A≈&óîÆA¯—t•∏$.\_ö¶«fúì‰jÏSÉOÍ:idI"Eb54552a9d7fbbcae3bf5dfb4c0b5af76437ac927e746b64d2264f5b01e7ec6f2;F:
+mtimel+7Ñ]

@@ -1,0 +1,73 @@
+{:uriI"€file://app/assets/bootstrap-4.3.1/_config.yml?type=text/yaml&id=391deafd93b2edb113356cd2017ba9a0696b95b03341e039d7bdd9bb9ddce10e:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI"+app/assets/bootstrap-4.3.1/_config.yml;T:	nameI"_config;T:logical_pathI"_config.yml;T:content_typeI"text/yaml;T:sourceI"ï	# Dependencies
+markdown:       kramdown
+highlighter:    rouge
+
+kramdown:
+  auto_ids:     true
+
+# Permalinks
+permalink:      pretty
+
+# Server
+source:         "site"
+destination:    ./_gh_pages
+host:           "localhost"
+port:           9001
+baseurl:        ""
+url:            "https://getbootstrap.com"
+encoding:       UTF-8
+exclude:
+  - docs/4.3/assets/scss/
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-toc
+
+# Social
+title:              Bootstrap
+description:        "The most popular HTML, CSS, and JS library in the world."
+twitter:            getbootstrap
+authors:            "Mark Otto, Jacob Thornton, and Bootstrap contributors"
+social_image_path:  /docs/4.3/assets/brand/bootstrap-social.png
+social_logo_path:   /docs/4.3/assets/brand/bootstrap-social-logo.png
+
+# Custom variables
+current_version:      4.3.1
+current_ruby_version: 4.3.1
+docs_version:         4.3
+repo:                 "https://github.com/twbs/bootstrap"
+slack:                "https://bootstrap-slack.herokuapp.com"
+opencollective:       "https://opencollective.com/bootstrap"
+blog:                 "https://blog.getbootstrap.com"
+expo:                 "https://expo.getbootstrap.com"
+themes:               "https://themes.getbootstrap.com"
+
+download:
+  source:           "https://github.com/twbs/bootstrap/archive/v4.3.1.zip"
+  dist:             "https://github.com/twbs/bootstrap/releases/download/v4.3.1/bootstrap-4.3.1-dist.zip"
+
+cdn:
+  # See https://www.srihash.org for info on how to generate the hashes
+  css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  css_hash:         "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  js:               "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  js_hash:          "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  js_bundle:        "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+  js_bundle_hash:   "sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+  jquery:           "https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  jquery_hash:      "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  popper_hash:      "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+
+toc:
+  min_level:        2
+  max_level:        4
+  no_toc_section_class:
+    - "bd-callout"
+    - "bd-example"
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/yaml&file_type=text/yaml;TTI"9file-digest://app/assets/bootstrap-4.3.1/_config.yml;TTF:charsetI"
+utf-8;F:digest"%äwc¬Û/_±²gõ|µµÎÖ‹Œ›òKp´rOµOøÅ:lengthiï	:dependencies_digest"%CÆ’bƒ[¹!ÏêæáeH"dªgzÆ‰`ÈÔõÄ¸üP:idI"E391deafd93b2edb113356cd2017ba9a0696b95b03341e039d7bdd9bb9ddce10e;F:
+mtimel+7„]

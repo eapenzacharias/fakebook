@@ -1,0 +1,22 @@
+{:uriI"file://app/assets/bootstrap-4.3.1/site/_data/theme-colors.yml?type=text/yaml&id=bc90f54b55de373f4da7069ddac372e66c2166b121b1a94b4be64fa30854cded:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI";app/assets/bootstrap-4.3.1/site/_data/theme-colors.yml;T:	nameI"site/_data/theme-colors;T:logical_pathI" site/_data/theme-colors.yml;T:content_typeI"text/yaml;T:sourceI"- name: primary
+  hex: "#007bff"
+- name: secondary
+  hex: "#868e96"
+- name: success
+  hex: "#28a745"
+- name: danger
+  hex: "#dc3545"
+- name: warning
+  hex: "#ffc107"
+- name: info
+  hex: "#17a2b8"
+- name: light
+  hex: "#f8f9fa"
+- name: dark
+  hex: "#343a40"
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/yaml&file_type=text/yaml;TTI"Ifile-digest://app/assets/bootstrap-4.3.1/site/_data/theme-colors.yml;TTF:charsetI"
+utf-8;F:digest"%ûë”òF}ı!fƒ7ğS3‰Ÿ˜°©t‡&§1s
+P:lengthi:dependencies_digest"%ÁÒI?˜k“Ü¼®,/´œßtJÆ³|HÜa(È„uÙ:idI"Ebc90f54b55de373f4da7069ddac372e66c2166b121b1a94b4be64fa30854cded;F:
+mtimel+7„]

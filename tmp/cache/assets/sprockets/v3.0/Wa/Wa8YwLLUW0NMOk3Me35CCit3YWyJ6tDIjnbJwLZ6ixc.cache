@@ -1,0 +1,27 @@
+{:uriI"«file://app/assets/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/manifest.json?type=application/json&id=1bac88edbbad6339ab3b0abadd15da01b89c9aa6e12fc2486285456f3d69e456:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI"Oapp/assets/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/manifest.json;T:	nameI"/site/docs/4.3/assets/img/favicons/manifest;T:logical_pathI"4site/docs/4.3/assets/img/favicons/manifest.json;T:content_typeI"application/json;T:sourceI",---
+---
+{
+  "name": "Bootstrap",
+  "short_name": "Bootstrap",
+  "icons": [
+    {
+      "src": "{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/img/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=a2hs",
+  "theme_color": "#563d7c",
+  "background_color": "#563d7c",
+  "display": "standalone"
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"]file-digest://app/assets/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/manifest.json;TTF:charsetI"
+utf-8;F:digest"%âcòS£LÔìô·P;Sú  ˜Ììm#Iêü!™Xh—p:lengthi,:dependencies_digest"%l¿ls‰Å¡3w^4‡ÍÁó ¸\®ç¾–­UòMæş9:idI"E1bac88edbbad6339ab3b0abadd15da01b89c9aa6e12fc2486285456f3d69e456;F:
+mtimel+7„]

@@ -1,0 +1,17 @@
+{:uriI"file://app/assets/bootstrap-4.3.1/site/_includes/footer.html?type=text/html&id=56edb31f14511c7c854df0485b009d159f4dd3cb50f11542fb6cb53fbf7525a0:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI":app/assets/bootstrap-4.3.1/site/_includes/footer.html;T:	nameI"site/_includes/footer;T:logical_pathI"site/_includes/footer.html;T:content_typeI"text/html;T:sourceI"Ô<footer class="bd-footer text-muted">
+  <div class="container-fluid p-3 p-md-5">
+    <ul class="bd-footer-links">
+      <li><a href="{{ site.repo }}">GitHub</a></li>
+      <li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
+      <li><a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/examples/">Examples</a></li>
+      <li><a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/overview/">About</a></li>
+    </ul>
+    <p>Designed and built with all the love in the world by the <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/about/team/">Bootstrap team</a> with the help of <a href="{{ site.repo }}/graphs/contributors">our contributors</a>.</p>
+    <p>Currently v{{ site.current_version }}. Code licensed <a href="{{ site.repo }}/blob/master/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+  </div>
+</footer>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Hfile-digest://app/assets/bootstrap-4.3.1/site/_includes/footer.html;TTF:charsetI"
+utf-8;F:digest"%?ÈŞû×ó2¥±ÜØ*€1	$×”ÿb|Á{$!p¸íT:lengthiÔ:dependencies_digest"%RÛ-\ÌÕÀBÓ®Ãe°w°ÚÂó¯9¼yg‰{:idI"E56edb31f14511c7c854df0485b009d159f4dd3cb50f11542fb6cb53fbf7525a0;F:
+mtimel+7„]

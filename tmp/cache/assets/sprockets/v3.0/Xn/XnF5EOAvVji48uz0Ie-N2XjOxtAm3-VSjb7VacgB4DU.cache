@@ -1,0 +1,96 @@
+{:uriI"áfile://app/assets/bootstrap-4.3.1/site/_data/nav.yml?type=text/yaml&id=aea6bcd799f8561bbd850a5c969cd32674eabd98441befa7db9c2c26e889b5d7:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI"2app/assets/bootstrap-4.3.1/site/_data/nav.yml;T:	nameI"site/_data/nav;T:logical_pathI"site/_data/nav.yml;T:content_typeI"text/yaml;T:sourceI"˝- title: Getting started
+  pages:
+    - title: Introduction
+    - title: Download
+    - title: Contents
+    - title: Browsers & devices
+    - title: JavaScript
+    - title: Theming
+    - title: Build tools
+    # - title: Best practices # TODO: Write this content
+    - title: Webpack
+    - title: Accessibility
+
+- title: Layout
+  pages:
+    - title: Overview
+    - title: Grid
+    - title: Utilities for layout
+
+- title: Content
+  pages:
+    - title: Reboot
+    - title: Typography
+    - title: Code
+    - title: Images
+    - title: Tables
+    - title: Figures
+
+- title: Components
+  pages:
+    - title: Alerts
+    - title: Badge
+    - title: Breadcrumb
+    - title: Buttons
+    - title: Button group
+    - title: Card
+    - title: Carousel
+    - title: Collapse
+    - title: Dropdowns
+    - title: Forms
+    - title: Input group
+    - title: Jumbotron
+    - title: List group
+    - title: Media object
+    - title: Modal
+    - title: Navs
+    - title: Navbar
+    - title: Pagination
+    - title: Popovers
+    - title: Progress
+    - title: Scrollspy
+    - title: Spinners
+    - title: Toasts
+    - title: Tooltips
+
+- title: Utilities
+  pages:
+    - title: Borders
+    - title: Clearfix
+    - title: Close icon
+    - title: Colors
+    - title: Display
+    - title: Embed
+    - title: Flex
+    - title: Float
+    - title: Image replacement
+    - title: Overflow
+    - title: Position
+    - title: Screen readers
+    - title: Shadows
+    - title: Sizing
+    - title: Spacing
+    - title: Stretched link
+    - title: Text
+    - title: Vertical align
+    - title: Visibility
+
+- title: Extend
+  pages:
+    - title: Approach
+    - title: Icons
+
+- title: Migration
+
+- title: About
+  pages:
+    - title: Overview
+    - title: Team
+    - title: Brand
+    - title: License
+    - title: Translations
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/yaml&file_type=text/yaml;TTI"@file-digest://app/assets/bootstrap-4.3.1/site/_data/nav.yml;TTF:charsetI"
+utf-8;F:digest"%_;O\ìÚ zceØõÇwpxI&aT¬J&|›ﬂ-QŒ:lengthi˝:dependencies_digest"%dzWl¶±üÏêÃ’Oƒ÷Çx»ﬁH„ŸM’"»¯Åí¯,:idI"Eaea6bcd799f8561bbd850a5c969cd32674eabd98441befa7db9c2c26e889b5d7;F:
+mtimel+7Ñ]

@@ -1,0 +1,14 @@
+{:uriI"êfile://app/assets/bootstrap-4.3.1/site/_includes/callout.html?type=text/html&id=cf4161ec0642a7411495c539c9fed255a050b22be8f63f94b1f13205cd364609:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI";app/assets/bootstrap-4.3.1/site/_includes/callout.html;T:	nameI"site/_includes/callout;T:logical_pathI" site/_includes/callout.html;T:content_typeI"text/html;T:sourceI"_{%- comment -%}
+  Usage: include callout.html content=callout type="type",
+  where content is a capture with the content
+  and type is one of: info (default), danger, warning
+{%- endcomment -%}
+{%- assign css_class = include.type | default: "info" -%}
+<div class="bd-callout bd-callout-{{ css_class }}">
+  {{- include.content | markdownify -}}
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Ifile-digest://app/assets/bootstrap-4.3.1/site/_includes/callout.html;TTF:charsetI"
+utf-8;F:digest"%∞HRr/åÀìÅöè5Õá∫*HŒÖ*ˇºüﬂ0‘‡>\:lengthi_:dependencies_digest"%FI/N≤§á±%¢dù‚1ﬁ†4Ç˜LÁF®‹œ´)E':idI"Ecf4161ec0642a7411495c539c9fed255a050b22be8f63f94b1f13205cd364609;F:
+mtimel+7Ñ]

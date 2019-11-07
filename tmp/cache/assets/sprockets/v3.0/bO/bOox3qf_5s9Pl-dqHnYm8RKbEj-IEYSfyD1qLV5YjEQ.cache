@@ -1,0 +1,37 @@
+{:uriI"¶file://app/assets/bootstrap-4.3.1/site/docs/4.3/examples/floating-labels/index.html?type=text/html&id=aa1253256f91d2757ecd6b847c2d5fdc6da4be8cacda54d1c8392ee6897d6d8e:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI"Qapp/assets/bootstrap-4.3.1/site/docs/4.3/examples/floating-labels/index.html;T:	nameI"1site/docs/4.3/examples/floating-labels/index;T:logical_pathI"6site/docs/4.3/examples/floating-labels/index.html;T:content_typeI"text/html;T:sourceI"---
+layout: examples
+title: Floating labels example
+extra_css: "floating-labels.css"
+include_js: false
+---
+
+<form class="form-signin">
+  <div class="text-center mb-4">
+    <img class="mb-4" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Floating labels</h1>
+    <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
+  </div>
+
+  <div class="form-label-group">
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputEmail">Email address</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <label for="inputPassword">Password</label>
+  </div>
+
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-{{ site.time | date: "%Y" }}</p>
+</form>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"_file-digest://app/assets/bootstrap-4.3.1/site/docs/4.3/examples/floating-labels/index.html;TTF:charsetI"
+utf-8;F:digest"%P˘≥-lá—jc˜ﬁ:∑≈£ò33K“ÜÄtP¸Ò @:lengthi:dependencies_digest"%Â¬è‘ªæuÜ::˛¥x√g:K¶••E¥g’¨íﬁ:idI"Eaa1253256f91d2757ecd6b847c2d5fdc6da4be8cacda54d1c8392ee6897d6d8e;F:
+mtimel+7Ñ]

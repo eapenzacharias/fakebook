@@ -1,0 +1,48 @@
+{:uriI"•file://app/assets/bootstrap-4.3.1/site/_includes/docs-sidebar.html?type=text/html&id=71cdac188acbf5ad8651452ef745baf0ab8b4fdbddcd87fa064f9e0aea8357d6:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI"@app/assets/bootstrap-4.3.1/site/_includes/docs-sidebar.html;T:	nameI" site/_includes/docs-sidebar;T:logical_pathI"%site/_includes/docs-sidebar.html;T:content_typeI"text/html;T:sourceI"=<form class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-docs-version="{{ site.docs_version }}">
+  <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    {%- include icons/menu.svg width="30" height="30" -%}
+  </button>
+</form>
+
+<nav class="collapse bd-links" id="bd-docs-nav">
+  {%- assign page_slug = page.url | split: '/' | last -%}
+  {%- for group in site.data.nav -%}
+  {%- assign link = group.pages | first -%}
+  {%- assign link_slug = link.title | slugify -%}
+  {%- assign group_slug = group.title | slugify -%}
+  {%- assign active = nil -%}
+
+  {%- if page.group == group_slug -%}
+    {%- assign active = 'active' -%}
+  {%- endif -%}
+
+  <div class="bd-toc-item{% unless active == nil %} {{ active }}{% endunless %}">
+      <a class="bd-toc-link" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/{{ group_slug }}/{{ link_slug }}{% if link_slug %}/{% endif %}">
+        {{ group.title }}
+      </a>
+
+      <ul class="nav bd-sidenav">
+        {%- for doc in group.pages -%}
+          {%- assign doc_slug = doc.title | slugify -%}
+          {%- assign active = nil -%}
+
+          {%- if page.group == group_slug and page_slug == doc_slug -%}
+            {%- assign active = 'active bd-sidenav-active' -%}
+          {%- endif -%}
+
+          <li{% unless active == nil %} class="{{ active }}"{% endunless %}>
+            <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/{{ group_slug }}/{{ doc_slug }}/">
+              {{ doc.title }}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endfor -%}
+</nav>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Nfile-digest://app/assets/bootstrap-4.3.1/site/_includes/docs-sidebar.html;TTF:charsetI"
+utf-8;F:digest"%æ^¾ød%FUnOì/=š‡œÈÏ…œæ·‰®FR:lengthi=:dependencies_digest"%xD/$–]TP?¶ª‡Èû…öÚü–'-™×« !ñ:idI"E71cdac188acbf5ad8651452ef745baf0ab8b4fdbddcd87fa064f9e0aea8357d6;F:
+mtimel+7„]
