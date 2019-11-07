@@ -1,28 +1,0 @@
-{:uriI"file://app/assets/bootstrap-4.3.1/site/_includes/header.html?type=text/html&id=453569fe785ca8e6aedd1c43567c8065abb11735882744899a94198ddad7216b:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI":app/assets/bootstrap-4.3.1/site/_includes/header.html;T:	nameI"site/_includes/header;T:logical_pathI"site/_includes/header.html;T:content_typeI"text/html;T:sourceI"2<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="{{ page.description | default: site.description | smartify }}">
-<meta name="author" content="{{ site.authors }}">
-<meta name="generator" content="Jekyll v{{ jekyll.version }}">
-
-<meta name="docsearch:language" content="en">
-<meta name="docsearch:version" content="{{ site.docs_version }}">
-
-<title>
-  {%- if page.title -%}
-    {{ page.title | smartify }} Â· {{ site.title | smartify }}
-  {%- else -%}
-    {{ site.title | smartify }} Â· {{ site.description | smartify }}
-  {%- endif -%}
-</title>
-
-<link rel="canonical" href="{{ site.url | append: page.url }}">
-
-{% include stylesheet.html %}
-{% include favicons.html %}
-{% include social.html %}
-{% include analytics.html %}
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Hfile-digest://app/assets/bootstrap-4.3.1/site/_includes/header.html;TTF:charsetI"
-utf-8;F:digest"%¾îs×ƒRV×dø±¨-¥ÊuË‡ïë`ªeßÍ2–+":lengthi2:dependencies_digest"%î®i@×æ?:i"ı"zÀo´ââ;g:İnt²]—:idI"E453569fe785ca8e6aedd1c43567c8065abb11735882744899a94198ddad7216b;F:
-mtimel+7„]

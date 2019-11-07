@@ -1,27 +1,0 @@
-{:uriI"èfile://app/assets/bootstrap-4.3.1/site/_layouts/default.html?type=text/html&id=3b604552bb0698ad1aa9cbb47f8f021a756c9a73bbbb0e5e32391b1ce967b6c2:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI":app/assets/bootstrap-4.3.1/site/_layouts/default.html;T:	nameI"site/_layouts/default;T:logical_pathI"site/_layouts/default.html;T:content_typeI"text/html;T:sourceI"ê<!doctype html>
-<html lang="en">
-  <head>
-    {% include header.html %}
-  </head>
-  <body>
-    {% include skippy.html %}
-
-    {% include docs-navbar.html %}
-
-    {% if page.layout == "simple" %}
-      {{ content }}
-    {% else %}
-      <main id="content" role="main">
-        {{ content }}
-      </main>
-    {% endif %}
-
-    {% include footer.html %}
-    {% include scripts.html %}
-  </body>
-</html>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Hfile-digest://app/assets/bootstrap-4.3.1/site/_layouts/default.html;TTF:charsetI"
-utf-8;F:digest"%O¥J£sIQ2«iÜhóÿ5NìpÖW_TÊ—Ê:lengthiê:dependencies_digest"%îx§çlz˝u‘èìΩ∏"1n§ùÄZìgf’$⁄∫Ω:idI"E3b604552bb0698ad1aa9cbb47f8f021a756c9a73bbbb0e5e32391b1ce967b6c2;F:
-mtimel+7Ñ]

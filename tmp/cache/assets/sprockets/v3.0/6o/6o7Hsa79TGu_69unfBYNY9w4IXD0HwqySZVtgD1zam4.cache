@@ -1,34 +1,0 @@
-{:uriI"èfile://app/assets/bootstrap-4.3.1/site/_data/breakpoints.yml?type=text/yaml&id=8e4466ceb8dffa6263301ccf6fb21261bdd5927052d713ff6228b9b66a7cddd8:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI":app/assets/bootstrap-4.3.1/site/_data/breakpoints.yml;T:	nameI"site/_data/breakpoints;T:logical_pathI"site/_data/breakpoints.yml;T:content_typeI"text/yaml;T:sourceI"¢- breakpoint: xs
-  abbr: ""
-  name: Extra small
-  min-width: 0px
-  container: ""
-
-- breakpoint: sm
-  abbr: -sm
-  name: Small
-  min-width: 576px
-  container: 540px
-
-- breakpoint: md
-  abbr: -md
-  name: Medium
-  min-width: 768px
-  container: 720px
-
-- breakpoint: lg
-  abbr: -lg
-  name: Large
-  min-width: 992px
-  container: 960px
-
-- breakpoint: xl
-  abbr: -xl
-  name: Extra large
-  min-width: 1200px
-  container: 1140px
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/yaml&file_type=text/yaml;TTI"Hfile-digest://app/assets/bootstrap-4.3.1/site/_data/breakpoints.yml;TTF:charsetI"
-utf-8;F:digest"%∂Ÿiîfk@‚a ,j°êe'Eb•ZFÁ_Ór‰ÿ:lengthi¢:dependencies_digest"%ÇÅ˝ÁI_SÇ±ˆå⁄…TœÃè◊f©];Cà–,_s,:idI"E8e4466ceb8dffa6263301ccf6fb21261bdd5927052d713ff6228b9b66a7cddd8;F:
-mtimel+7Ñ]

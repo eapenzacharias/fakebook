@@ -1,26 +1,0 @@
-{:uriI"file://app/assets/bootstrap-4.3.1/site/_includes/social.html?type=text/html&id=df6ed1d6e7a263e6fdce370827d991337234840f18f23cf31c4ce794e9ee9a39:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI":app/assets/bootstrap-4.3.1/site/_includes/social.html;T:	nameI"site/_includes/social;T:logical_pathI"site/_includes/social.html;T:content_typeI"text/html;T:sourceI"
-<!-- Twitter -->
-<meta name="twitter:card" content="{% if page.title %}summary{% else %}summary_large_image{% endif %}">
-<meta name="twitter:site" content="@{{ site.twitter }}">
-<meta name="twitter:creator" content="@{{ site.twitter }}">
-<meta name="twitter:title" content="{{ page.title | default: site.title | smartify }}">
-<meta name="twitter:description" content="{{ page.description | default: site.description | smartify }}">
-<meta name="twitter:image" content="{% if page.title %}{{ site.url | append: site.social_logo_path }}{% else %}{{ site.url | append: site.social_image_path }}{% endif %}">
-
-<!-- Facebook -->
-<meta property="og:url" content="{{ site.url | append: page.url }}">
-<meta property="og:title" content="{{ page.title | default: site.title | smartify }}">
-<meta property="og:description" content="{{ page.description | default: site.description | smartify }}">
-<meta property="og:type" content="website">
-<meta property="og:image" content="{{ site.url | replace: 'https://', 'http://' | append: site.social_image_path }}">
-<meta property="og:image:secure_url" content="{{ site.url | append: site.social_image_path }}">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Hfile-digest://app/assets/bootstrap-4.3.1/site/_includes/social.html;TTF:charsetI"
-utf-8;F:digest"%âØ¥nèĞª
-©³o$Ã AV\:2äËˆ sL	Ñ³':lengthi
-:dependencies_digest"%O˜DH9ø.2¨ã(f	½ohƒü¯¶¿ sÁ¬J:idI"Edf6ed1d6e7a263e6fdce370827d991337234840f18f23cf31c4ce794e9ee9a39;F:
-mtimel+7„]

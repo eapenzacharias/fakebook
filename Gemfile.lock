@@ -356,6 +356,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activestorage (~> 5.2.3)
   aws-sdk-s3
   bcrypt (~> 3.1.7)
   binding_of_caller (~> 0.8.0)

@@ -1,60 +1,0 @@
-{:uriI"Œfile://app/assets/bootstrap-4.3.1/site/_data/examples.yml?type=text/yaml&id=af76fb83bfe30e213b897ac1fd877cf3d77342936c9ddec69c2bed477cec612e:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI"7app/assets/bootstrap-4.3.1/site/_data/examples.yml;T:	nameI"site/_data/examples;T:logical_pathI"site/_data/examples.yml;T:content_typeI"text/yaml;T:sourceI"6- category: Custom components
-  description: "Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework."
-  examples:
-    - name: Album
-      description: "Simple one-page template for photo galleries, portfolios, and more."
-    - name: Pricing
-      description: "Example pricing page built with Cards and featuring a custom header and footer."
-    - name: Checkout
-      description: "Custom checkout form showing our form components and their validation features."
-    - name: Product
-      description: "Lean product-focused marketing page with extensive grid and image work."
-    - name: Cover
-      description: "A one-page template for building simple and beautiful home pages."
-    - name: Carousel
-      description: "Customize the navbar and carousel, then add some new components."
-    - name: Blog
-      description: "Magazine like blog template with header, navigation, featured content."
-    - name: Dashboard
-      description: "Basic admin dashboard shell with fixed sidebar and navbar."
-    - name: Sign-in
-      description: "Custom form layout and design for a simple sign in form."
-    - name: Sticky footer
-      description: "Attach a footer to the bottom of the viewport when page content is short."
-    - name: Sticky footer navbar
-      description: "Attach a footer to the bottom of the viewport with a fixed top navbar."
-
-- category: Framework
-  description: "Examples that focus on implementing uses of built-in components provided by Bootstrap."
-  examples:
-    - name: "Starter template"
-      description: "Nothing but the basics: compiled CSS and JavaScript."
-    - name: Grid
-      description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
-    - name: Jumbotron
-      description: "Build around the jumbotron with a navbar and some basic grid columns."
-
-- category: Navbars
-  description: "Taking the default navbar component and showing how it can be moved, placed, and extended."
-  examples:
-    - name: Navbars
-      description: "Demonstration of all responsive and container options for the navbar."
-    - name: Navbar static
-      description: "Single navbar example of a static top navbar along with some additional content."
-    - name: Navbar fixed
-      description: "Single navbar example with a fixed top navbar along with some additional content."
-    - name: Navbar bottom
-      description: "Single navbar example with a bottom navbar along with some additional content."
-
-- category: Experiments
-  description: "Examples that focus on future-friendly features or techniques."
-  examples:
-    - name: Floating labels
-      description: "Beautifully simple forms with floating labels over your inputs."
-    - name: Offcanvas
-      description: "Turn your expandable navbar into a sliding offcanvas menu."
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/yaml&file_type=text/yaml;TTI"Efile-digest://app/assets/bootstrap-4.3.1/site/_data/examples.yml;TTF:charsetI"
-utf-8;F:digest"%H'DU¼»	4Óô}Q»±Y¿¯² ÜiMH´ûiÀ%:lengthi6:dependencies_digest"%Á=µ1ïÕuUßÖ›@0nôzd‚ñ2*¬Ø8Ñ¬>L:idI"Eaf76fb83bfe30e213b897ac1fd877cf3d77342936c9ddec69c2bed477cec612e;F:
-mtimel+7„]

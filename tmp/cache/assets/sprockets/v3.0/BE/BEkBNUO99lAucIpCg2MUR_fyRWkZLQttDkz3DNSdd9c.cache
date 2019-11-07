@@ -1,24 +1,0 @@
-{:uriI"Žfile://app/assets/bootstrap-4.3.1/site/_layouts/simple.html?type=text/html&id=d74141174c08abb117650110f20ff6bff4a8ebbbf85771cae656345a36fee274:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI"9app/assets/bootstrap-4.3.1/site/_layouts/simple.html;T:	nameI"site/_layouts/simple;T:logical_pathI"site/_layouts/simple.html;T:content_typeI"text/html;T:sourceI"a---
-layout: default
----
-
-<header class="d-flex flex-column flex-md-row align-items-md-center p-5 bg-light">
-  <div class="pt-md-3 pb-md-4">
-    <h1 class="bd-title mt-0">{{ page.title | smartify }}</h1>
-    <p class="bd-lead">{{ page.description | smartify }}</p>
-    {%- if page.title == "Examples" -%}
-    <a href="{{ site.download.source }}" class="btn btn-lg btn-bd-primary" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download');">Download source code</a>
-    {%- endif -%}
-  </div>
-  {% include ads.html %}
-</header>
-
-<main class="bd-content p-5" id="content" role="main">
-  {{ content }}
-</main>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Gfile-digest://app/assets/bootstrap-4.3.1/site/_layouts/simple.html;TTF:charsetI"
-utf-8;F:digest"%šËcVé]\%Æb«(#É/(ö°ú]êÝõ°úìZž:lengthia:dependencies_digest"%ÿˆ
-yáí$pµ7:eç°ÓÒúá#-`žÊ› ~ýÄv:idI"Ed74141174c08abb117650110f20ff6bff4a8ebbbf85771cae656345a36fee274;F:
-mtimel+7„]

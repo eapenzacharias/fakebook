@@ -1,62 +1,0 @@
-{:uriI"ƒfile://app/assets/bootstrap-4.3.1/build/svgo.yml?type=text/yaml&id=2ff32d80fb074371c5b45ab1a0860af8bef80f9846b2852cf1680fee3df22388:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI".app/assets/bootstrap-4.3.1/build/svgo.yml;T:	nameI"build/svgo;T:logical_pathI"build/svgo.yml;T:content_typeI"text/yaml;T:sourceI"®# Usage:
-# install svgo globally: `npm i -g svgo`
-# svgo --config=build/svgo.yml --input=foo.svg
-
-# https://github.com/svg/svgo/blob/master/docs/how-it-works/en.md
-# replace default config
-
-multipass: true
-#full: true
-
-# https://github.com/svg/svgo/blob/master/lib/svgo/js2svg.js#L6 for more config options
-
-js2svg:
-  pretty: true
-  indent: 2
-
-plugins:
-  # remove this with IE 11 is no longer supported
-  - addAttributesToSVGElement:
-      attributes:
-        - focusable: false
-  - cleanupAttrs: true
-  - cleanupEnableBackground: true
-  - cleanupIDs: true
-  - cleanupListOfValues: true
-  - cleanupNumericValues: true
-  - collapseGroups: true
-  - convertColors: true
-  - convertPathData: true
-  - convertShapeToPath: true
-  - convertStyleToAttrs: true
-  - convertTransform: true
-  - inlineStyles: true
-  - mergePaths: true
-  - minifyStyles: true
-  - moveElemsAttrsToGroup: true
-  - moveGroupAttrsToElems: true
-  - removeComments: true
-  - removeDesc: true
-  - removeDoctype: true
-  - removeEditorsNSData: true
-  - removeEmptyAttrs: true
-  - removeEmptyContainers: true
-  - removeEmptyText: true
-  - removeHiddenElems: true
-  - removeMetadata: true
-  - removeNonInheritableGroupAttrs: true
-  - removeTitle: false
-  - removeUnknownsAndDefaults:
-      keepRoleAttr: true
-  - removeUnusedNS: true
-  - removeUselessDefs: true
-  - removeUselessStrokeAndFill: true
-  - removeViewBox: false
-  - removeXMLNS: false
-  - removeXMLProcInst: true
-  - sortAttrs: true
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/yaml&file_type=text/yaml;TTI"<file-digest://app/assets/bootstrap-4.3.1/build/svgo.yml;TTF:charsetI"
-utf-8;F:digest"%ÏöZ»úŒïf}nM¢uL?rwÇŸ©9äX·r×¿°:lengthi®:dependencies_digest"%º¡,\ªÁTïð²ŽU/?†Ñx;Æç‘âŽ4X„U:idI"E2ff32d80fb074371c5b45ab1a0860af8bef80f9846b2852cf1680fee3df22388;F:
-mtimel+7„]

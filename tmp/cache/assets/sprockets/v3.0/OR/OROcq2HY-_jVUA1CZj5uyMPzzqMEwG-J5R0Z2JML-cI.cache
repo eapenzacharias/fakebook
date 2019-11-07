@@ -1,44 +1,0 @@
-{:uriI"¤file://app/assets/bootstrap-4.3.1/site/docs/4.3/examples/navbar-bottom/index.html?type=text/html&id=331b63e80e93659605f0f6656cf23e7f0f2db90210ac71fe498a4fdee4c47661:ET:load_pathI"app/assets/bootstrap-4.3.1;T:filenameI"Oapp/assets/bootstrap-4.3.1/site/docs/4.3/examples/navbar-bottom/index.html;T:	nameI"/site/docs/4.3/examples/navbar-bottom/index;T:logical_pathI"4site/docs/4.3/examples/navbar-bottom/index.html;T:content_typeI"text/html;T:sourceI"’---
-layout: examples
-title: Bottom navbar example
----
-
-<div class="container">
-  <div class="jumbotron mt-3">
-    <h1>Bottom Navbar example</h1>
-    <p class="lead">This example is a quick exercise to illustrate how the bottom navbar works.</p>
-    <a class="btn btn-lg btn-primary" href="{{ site.baseurl }}/docs/{{ site.docs_version }}/components/navbar/" role="button">View navbar docs &raquo;</a>
-  </div>
-</div>
-<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Bottom navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-      <li class="nav-item dropup">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropup</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown10">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"]file-digest://app/assets/bootstrap-4.3.1/site/docs/4.3/examples/navbar-bottom/index.html;TTF:charsetI"
-utf-8;F:digest"%=_“®…ì„.aùâ ¹¹Êr…BÃX““ş~ê±ë:lengthi’:dependencies_digest"%]¶õ±WãTf’Ãÿ¯ë°LÌîÛõ„‡úg“:idI"E331b63e80e93659605f0f6656cf23e7f0f2db90210ac71fe498a4fdee4c47661;F:
-mtimel+7„]

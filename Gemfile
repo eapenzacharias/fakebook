@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
-gem 'activestorage', '~> 0.1'
+gem 'activestorage', '~> 5.2.3'
 gem 'aws-sdk-s3'
 gem 'binding_of_caller', '~> 0.8.0'
 gem 'bootstrap', '~>4.3.1'
