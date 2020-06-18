@@ -1,6 +1,6 @@
 # Project: Fakebook ([Microverse - The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project))
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/eapenzacharias/fakebook.svg)](https://greenkeeper.io/)
+
 
 This is a project for Rails in the Ruby on Rails part of the main curriculum for [Microverse](https://www.microverse.org/) - @microverseinc
 * The goal is to build a facebook like site.  
