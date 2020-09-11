@@ -3,11 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
-gem 'activestorage', '~> 5.2.3'
+gem 'activestorage', '~> 5.2.4', '>= 5.2.4.4'
 gem 'aws-sdk-s3'
 gem 'binding_of_caller', '~> 0.8.0'
 gem 'bootstrap', '~> 4.3.1'
-gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'faker', '~> 1.6', '>= 1.6.3'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'font-awesome-rails', '>= 4.7.0.5'
@@ -20,7 +20,7 @@ gem 'will_paginate', '~> 3.2'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.3'
+gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1', '>= 1.1.4'
 # Use Puma as the app server
@@ -82,10 +82,10 @@ group :test do
 end
 
 group :development, :test do
-  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
+  gem 'factory_bot_rails', '~> 5.2', '>= 5.2.0'
   gem 'guard-livereload'
   gem 'guard-rspec'
-  gem 'rspec-rails', '~> 3.9', '>= 3.9.0'
+  gem 'rspec-rails', '~> 3.9', '>= 3.9.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
