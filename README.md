@@ -1,5 +1,4 @@
-# Project: Fakebook ([Microverse - The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project))
-
+# Project: Fakebook - Minimalistic Social Network
 
 
 This is a project for Rails in the Ruby on Rails part of the main curriculum for [Microverse](https://www.microverse.org/) - @microverseinc
