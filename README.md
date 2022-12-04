@@ -1,7 +1,7 @@
 # Project: Fakebook - Minimalistic Social Network
 
 
-This is a project for Rails in the Ruby on Rails part of the main curriculum for [Microverse](https://www.microverse.org/) - @microverseinc
+This is a project built with Ruby on Rails
 * The goal is to build a facebook like site.  
 * The project was completed using Ruby on Rails, HTML and CSS.
 
