@@ -7,7 +7,7 @@ gem 'activestorage', '~> 5.2.6', '>= 5.2.6.3'
 gem 'aws-sdk-s3'
 gem 'binding_of_caller', '~> 0.8.0'
 gem 'bootstrap', '~> 4.3.1'
-gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'faker', '~> 1.6', '>= 1.6.3'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'font-awesome-rails', '>= 4.7.0.5'
@@ -15,7 +15,7 @@ gem 'image_processing', '~> 1.9', '>= 1.9.3'
 gem 'jquery-rails', '~> 4.4', '>= 4.4.0'
 gem 'omniauth-facebook', '>= 5.0.0'
 gem 'popper_js', '~> 1.14', '>= 1.14.5'
-gem 'sprockets-rails', '~> 3.2.1'
+gem 'sprockets-rails', '~> 3.2.2'
 gem 'will_paginate', '~> 3.2'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
 
@@ -37,7 +37,7 @@ gem 'coffee-rails', '~> 4.2', '>= 4.2.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.9', '>= 2.9.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -82,10 +82,10 @@ group :test do
 end
 
 group :development, :test do
-  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
+  gem 'factory_bot_rails', '~> 5.2', '>= 5.2.0'
   gem 'guard-livereload'
   gem 'guard-rspec'
-  gem 'rspec-rails', '~> 3.9', '>= 3.9.0'
+  gem 'rspec-rails', '~> 3.9', '>= 3.9.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
