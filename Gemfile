@@ -15,7 +15,7 @@ gem 'image_processing', '~> 1.9', '>= 1.9.3'
 gem 'jquery-rails', '~> 4.4', '>= 4.4.0'
 gem 'omniauth-facebook', '>= 5.0.0'
 gem 'popper_js', '~> 1.14', '>= 1.14.5'
-gem 'sprockets-rails', '~> 3.2.1'
+gem 'sprockets-rails', '~> 3.2.2'
 gem 'will_paginate', '~> 3.2'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
 
@@ -26,7 +26,7 @@ gem 'pg', '~> 1.1', '>= 1.1.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.12'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.1', '>= 5.1.0'
+gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
