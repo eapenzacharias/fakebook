@@ -20,7 +20,7 @@ gem 'will_paginate', '~> 3.2'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.6', '>= 5.2.6.3'
+gem 'rails', '~> 7.1.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1', '>= 1.1.4'
 # Use Puma as the app server
