@@ -82,7 +82,7 @@ group :test do
 end
 
 group :development, :test do
-  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
+  gem 'factory_bot_rails', '~> 6.5', '>= 6.5.0'
   gem 'guard-livereload'
   gem 'guard-rspec'
   gem 'rspec-rails', '~> 3.9', '>= 3.9.0'
